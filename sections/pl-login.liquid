@@ -1,0 +1,61 @@
+{% style %}
+{{ section.settings.font | font_face: font_display: 'swap' }}
+{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
+{% endstyle %}
+<div id="PL-{{ section.id }}" class="pl-login">
+<section id="login" class="pl-login-1">
+    <div class="pl-login-2">
+      <div class="pl-login-3">{{ section.settings.text_1 | escape }}</div>
+      <a href="{{ section.settings.link_1 | escape }}" class="pl-login-4">{{ section.settings.text_2 | escape }}</a>
+    </div>
+  </section>
+</div>
+
+{% stylesheet %}
+.pl-login {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-login *, .pl-login *::before, .pl-login *::after {box-sizing:border-box} .pl-login a {color:#a03f32;text-decoration:none} .pl-login a:hover {color:#7e2f25} .pl-login a:focus-visible, .pl-login select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-login select {font-family:inherit} .pl-login h1,.pl-login h2,.pl-login h3 {color:inherit} .pl-login [id] {scroll-margin-top:110px}
+.pl-login .pl-login-1 { background: #a03f32; color: #fdfaf4; padding: 38px 40px }
+.pl-login .pl-login-2 { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap }
+.pl-login .pl-login-3 { font-family: var(--pl-font); font-size: 22px }
+.pl-login .pl-login-4 { display: inline-block; background: #fdfaf4; color: #a03f32; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 26px; border-radius: 2px }
+.pl-login .pl-login-4:hover { background: #f3ede1; color: #7e2f25 }
+
+@media(max-width:749px){.pl-login > :first-child {padding-left:24px;padding-right:24px}}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "PL Login banner",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1",
+      "default": "https://mybocohome.com/pages/ws-account-login"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Already approved? Sign in to see your pric…",
+      "default": "Already approved? Sign in to see your pricing."
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Log in",
+      "default": "Log in"
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PL Login banner"
+    }
+  ]
+}
+{% endschema %}

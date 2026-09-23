@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>{{ page_title | escape }} — {{ shop.name | escape }}</title>
+    {% if page_description != blank %}<meta name="description" content="{{ page_description | escape }}">{% endif %}
+    <link rel="canonical" href="{{ canonical_url }}">
+    {{ content_for_header }}
+    <style>body {margin:0;background:#f7f3ea} .pl-skip {position:absolute;left:16px;top:-100px;z-index:100;background:#fdfaf4;color:#211d1a;padding:12px} .pl-skip:focus {top:12px}</style>
+  </head>
+  <body>
+    <a class="pl-skip" href="#MainContent">{{ 'accessibility.skip_to_text' | t }}</a>
+    <main id="MainContent" tabindex="-1">{{ content_for_layout }}</main>
+  </body>
+</html>

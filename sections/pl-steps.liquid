@@ -1,0 +1,138 @@
+{% style %}
+{{ section.settings.font | font_face: font_display: 'swap' }}
+{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
+{% endstyle %}
+<div id="PL-{{ section.id }}" class="pl-steps">
+<section id="how" class="pl-steps-1">
+    <div class="pl-steps-2">
+      <div class="pl-steps-3">{{ section.settings.text_1 | escape }}</div>
+      <h2 class="pl-steps-4">{{ section.settings.text_2 | escape }}</h2>
+      <div class="pl-steps-5">
+        <div class="pl-steps-6">
+          <div class="pl-steps-7">{{ section.settings.text_3 | escape }}</div>
+          <h3 class="pl-steps-8">{{ section.settings.text_4 | escape }}</h3>
+          <p class="pl-steps-9">{{ section.settings.text_5 | escape }}</p>
+        </div>
+        <div class="pl-steps-10">
+          <div class="pl-steps-11">{{ section.settings.text_6 | escape }}</div>
+          <h3 class="pl-steps-12">{{ section.settings.text_7 | escape }}</h3>
+          <p class="pl-steps-13">{{ section.settings.text_8 | escape }}</p>
+        </div>
+        <div class="pl-steps-14">
+          <div class="pl-steps-15">{{ section.settings.text_9 | escape }}</div>
+          <h3 class="pl-steps-16">{{ section.settings.text_10 | escape }}</h3>
+          <p class="pl-steps-17">{{ section.settings.text_11 | escape }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% stylesheet %}
+.pl-steps {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-steps *, .pl-steps *::before, .pl-steps *::after {box-sizing:border-box} .pl-steps a {color:#a03f32;text-decoration:none} .pl-steps a:hover {color:#7e2f25} .pl-steps a:focus-visible, .pl-steps select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-steps select {font-family:inherit} .pl-steps h1,.pl-steps h2,.pl-steps h3 {color:inherit} .pl-steps [id] {scroll-margin-top:110px}
+.pl-steps .pl-steps-1 { background: #262b27; color: #f3ede1; padding: 88px 40px }
+.pl-steps .pl-steps-2 { max-width: 1080px; margin: 0 auto }
+.pl-steps .pl-steps-3 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #d79a86 }
+.pl-steps .pl-steps-4 { font-family: var(--pl-font); font-weight: 500; font-size: 34px; letter-spacing: -0.01em; margin: 14px 0 0; color: #fdfaf4 }
+.pl-steps .pl-steps-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-top: 52px }
+.pl-steps .pl-steps-6 { border-top: 1px solid #47503f; padding-top: 22px }
+.pl-steps .pl-steps-7 { font-family: var(--pl-font); font-size: 15px; color: #d79a86; letter-spacing: 0.2em }
+.pl-steps .pl-steps-8 { font-family: var(--pl-font); font-weight: 500; font-size: 22px; margin: 14px 0 0; color: #fdfaf4 }
+.pl-steps .pl-steps-9 { font-size: 14px; line-height: 1.7; color: #c3bdae; margin: 10px 0 0 }
+.pl-steps .pl-steps-10 { border-top: 1px solid #47503f; padding-top: 22px }
+.pl-steps .pl-steps-11 { font-family: var(--pl-font); font-size: 15px; color: #d79a86; letter-spacing: 0.2em }
+.pl-steps .pl-steps-12 { font-family: var(--pl-font); font-weight: 500; font-size: 22px; margin: 14px 0 0; color: #fdfaf4 }
+.pl-steps .pl-steps-13 { font-size: 14px; line-height: 1.7; color: #c3bdae; margin: 10px 0 0 }
+.pl-steps .pl-steps-14 { border-top: 1px solid #47503f; padding-top: 22px }
+.pl-steps .pl-steps-15 { font-family: var(--pl-font); font-size: 15px; color: #d79a86; letter-spacing: 0.2em }
+.pl-steps .pl-steps-16 { font-family: var(--pl-font); font-weight: 500; font-size: 22px; margin: 14px 0 0; color: #fdfaf4 }
+.pl-steps .pl-steps-17 { font-size: 14px; line-height: 1.7; color: #c3bdae; margin: 10px 0 0 }
+
+@media(max-width:749px){.pl-steps > :first-child {padding-left:24px;padding-right:24px}}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "PL Wholesale steps",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "How wholesale works",
+      "default": "How wholesale works"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Three steps to trade pricing",
+      "default": "Three steps to trade pricing"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "01",
+      "default": "01"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Browse the line",
+      "default": "Browse the line"
+    },
+    {
+      "type": "text",
+      "id": "text_5",
+      "label": "Every lantern, photograph and frame option…",
+      "default": "Every lantern, photograph and frame option is open to view before you apply."
+    },
+    {
+      "type": "text",
+      "id": "text_6",
+      "label": "02",
+      "default": "02"
+    },
+    {
+      "type": "text",
+      "id": "text_7",
+      "label": "Apply for an account",
+      "default": "Apply for an account"
+    },
+    {
+      "type": "text",
+      "id": "text_8",
+      "label": "Send your shop details and resale certific…",
+      "default": "Send your shop details and resale certificate through the form below."
+    },
+    {
+      "type": "text",
+      "id": "text_9",
+      "label": "03",
+      "default": "03"
+    },
+    {
+      "type": "text",
+      "id": "text_10",
+      "label": "Log in and order",
+      "default": "Log in and order"
+    },
+    {
+      "type": "text",
+      "id": "text_11",
+      "label": "Once approved, wholesale pricing and check…",
+      "default": "Once approved, wholesale pricing and checkout appear the next time you sign in."
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PL Wholesale steps"
+    }
+  ]
+}
+{% endschema %}

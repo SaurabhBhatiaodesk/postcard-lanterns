@@ -1,0 +1,114 @@
+{% style %}
+{{ section.settings.font | font_face: font_display: 'swap' }}
+{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
+{% endstyle %}
+<div id="PL-{{ section.id }}" class="pl-header">
+<header class="pl-header-1">
+    <div class="pl-header-2">
+      <span class="pl-header-3">{{ section.settings.text_1 | escape }}</span>
+      <span class="pl-header-4">{{ section.settings.text_2 | escape }}</span>
+    </div>
+    <div class="pl-header-5">
+      <a href="{{ section.settings.link_1 | escape }}" class="pl-header-6">{{ section.settings.text_3 | escape }}</a>
+      <a href="{{ section.settings.link_2 | escape }}" class="pl-header-7">{{ section.settings.text_4 | escape }}</a>
+      <a href="{{ section.settings.link_3 | escape }}" class="pl-header-8">{{ section.settings.text_5 | escape }}</a>
+      <a href="{{ section.settings.link_4 | escape }}" class="pl-header-9">{{ section.settings.text_6 | escape }}</a>
+    </div>
+  </header>
+</div>
+
+{% stylesheet %}
+.pl-header {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-header *, .pl-header *::before, .pl-header *::after {box-sizing:border-box} .pl-header a {color:#a03f32;text-decoration:none} .pl-header a:hover {color:#7e2f25} .pl-header a:focus-visible, .pl-header select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-header select {font-family:inherit} .pl-header h1,.pl-header h2,.pl-header h3 {color:inherit} .pl-header [id] {scroll-margin-top:110px}
+.pl-header .pl-header-1 { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding: 18px 40px; border-bottom: 1px solid #e2d9c8; background: #f7f3ea; position: sticky; top: 0; z-index: 20 }
+.pl-header .pl-header-2 { display: flex; align-items: baseline; gap: 10px }
+.pl-header .pl-header-3 { font-family: var(--pl-font); font-weight: 600; font-size: 20px; letter-spacing: 0.02em }
+.pl-header .pl-header-4 { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #655c4e; border-left: 1px solid #d9cdb8; padding-left: 10px }
+.pl-header .pl-header-5 { display: flex; align-items: center; gap: 22px }
+.pl-header .pl-header-6 { font-size: 13px; letter-spacing: 0.04em; color: #4a443c }
+.pl-header .pl-header-7 { font-size: 13px; letter-spacing: 0.04em; color: #4a443c }
+.pl-header .pl-header-8 { font-size: 13px; letter-spacing: 0.04em; color: #4a443c }
+.pl-header .pl-header-9 { display: inline-block; background: #a03f32; color: #fdfaf4; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; padding: 11px 20px; border-radius: 2px }
+.pl-header .pl-header-9:hover { background: #7e2f25; color: #fdfaf4 }
+.shopify-section:has(> .pl-header) {position:sticky;top:0;z-index:20} .pl-header .pl-header-5 {flex-wrap:wrap} @media(max-width:749px){.pl-header .pl-header-1 {gap:16px} .pl-header .pl-header-5 {gap:14px}}
+@media(max-width:749px){.pl-header > :first-child {padding-left:24px;padding-right:24px}}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "PL Wholesale header",
+  "settings": [
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1",
+      "default": "#collection"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2",
+      "default": "#how"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link 3",
+      "default": "https://mybocohome.com/pages/ws-account-login"
+    },
+    {
+      "type": "url",
+      "id": "link_4",
+      "label": "Link 4",
+      "default": "#register"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Postcard Lanterns",
+      "default": "Postcard Lanterns"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Wholesale",
+      "default": "Wholesale"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Collection",
+      "default": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "How it works",
+      "default": "How it works"
+    },
+    {
+      "type": "text",
+      "id": "text_5",
+      "label": "Log in",
+      "default": "Log in"
+    },
+    {
+      "type": "text",
+      "id": "text_6",
+      "label": "Apply for wholesale",
+      "default": "Apply for wholesale"
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PL Wholesale header"
+    }
+  ]
+}
+{% endschema %}

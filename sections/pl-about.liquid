@@ -1,0 +1,54 @@
+{% style %}
+{{ section.settings.font | font_face: font_display: 'swap' }}
+{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
+{% endstyle %}
+<div id="PL-{{ section.id }}" class="pl-about">
+<section class="pl-about-1">
+    <div class="pl-about-2">
+      <div class="pl-about-3">{{ section.settings.text_1 | escape }}</div>
+      <p class="pl-about-4">{{ section.settings.text_2 | escape }}</p>
+    </div>
+  </section>
+</div>
+
+{% stylesheet %}
+.pl-about {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-about *, .pl-about *::before, .pl-about *::after {box-sizing:border-box} .pl-about a {color:#a03f32;text-decoration:none} .pl-about a:hover {color:#7e2f25} .pl-about a:focus-visible, .pl-about select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-about select {font-family:inherit} .pl-about h1,.pl-about h2,.pl-about h3 {color:inherit} .pl-about [id] {scroll-margin-top:110px}
+.pl-about .pl-about-1 { background: #efe8da; border-top: 1px solid #e2d9c8; border-bottom: 1px solid #e2d9c8; padding: 64px 40px }
+.pl-about .pl-about-2 { max-width: 720px; margin: 0 auto; text-align: center }
+.pl-about .pl-about-3 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #a03f32 }
+.pl-about .pl-about-4 { font-family: var(--pl-font); font-size: 21px; line-height: 1.6; color: #3a342c; margin: 20px 0 0; text-wrap: pretty }
+
+@media(max-width:749px){.pl-about > :first-child {padding-left:24px;padding-right:24px}}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "PL About",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "About us",
+      "default": "About us"
+    },
+    {
+      "type": "textarea",
+      "id": "text_2",
+      "label": "Bo•Co Home makes decorative lanterns in Co…",
+      "default": "Bo•Co Home makes decorative lanterns in Colorado, printing scenic photography onto four-panel LED lanterns that light a room the way a postcard lights a memory."
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PL About"
+    }
+  ]
+}
+{% endschema %}

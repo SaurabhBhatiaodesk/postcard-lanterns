@@ -1,0 +1,120 @@
+{% style %}
+{{ section.settings.font | font_face: font_display: 'swap' }}
+{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
+{% endstyle %}
+<div id="PL-{{ section.id }}" class="pl-hero">
+<section class="pl-hero-1">
+    <div class="pl-hero-2">
+      <div class="pl-hero-3">{{ section.settings.text_1 | escape }}</div>
+      <h1 class="pl-hero-4">{{ section.settings.text_2 | escape }}<br><em class="pl-hero-5">{{ section.settings.text_3 | escape }}</em></h1>
+      <p class="pl-hero-6">{{ section.settings.text_4 | escape }}</p>
+      <div class="pl-hero-7">
+        <a href="{{ section.settings.link_1 | escape }}" class="pl-hero-8">{{ section.settings.text_5 | escape }}</a>
+        <a href="{{ section.settings.link_2 | escape }}" class="pl-hero-9">{{ section.settings.text_6 | escape }}</a>
+      </div>
+      <div class="pl-hero-10">
+        <span class="pl-hero-11"></span>
+        <span>{{ section.settings.text_7 | escape }}</span>
+      </div>
+    </div>
+    <div class="pl-hero-image">{% if section.settings.image != blank %}{{ section.settings.image | image_url: width: 2000 | image_tag: widths: '480, 750, 1100, 1500, 2000', sizes: '(min-width: 750px) 48vw, 100vw', loading: 'eager', fetchpriority: 'high' }}{% else %}{{ 'product-1' | placeholder_svg_tag: 'pl-hero-placeholder' }}{% endif %}</div>
+  </section>
+</div>
+
+{% stylesheet %}
+.pl-hero {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-hero *, .pl-hero *::before, .pl-hero *::after {box-sizing:border-box} .pl-hero a {color:#a03f32;text-decoration:none} .pl-hero a:hover {color:#7e2f25} .pl-hero a:focus-visible, .pl-hero select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-hero select {font-family:inherit} .pl-hero h1,.pl-hero h2,.pl-hero h3 {color:inherit} .pl-hero [id] {scroll-margin-top:110px}
+.pl-hero .pl-hero-1 { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); align-items: stretch; background: #f7f3ea }
+.pl-hero .pl-hero-2 { padding: 92px 56px 92px 40px; max-width: 680px }
+.pl-hero .pl-hero-3 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #a03f32 }
+.pl-hero .pl-hero-4 { font-family: var(--pl-font); font-weight: 500; font-size: clamp(38px, 5.2vw, 64px); line-height: 1.04; letter-spacing: -0.015em; margin: 22px 0 0; text-wrap: pretty }
+.pl-hero .pl-hero-5 { font-style: italic }
+.pl-hero .pl-hero-6 { font-size: 16px; line-height: 1.7; color: #554e45; margin: 24px 0 0; max-width: 46ch }
+.pl-hero .pl-hero-7 { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px }
+.pl-hero .pl-hero-8 { display: inline-block; background: #a03f32; color: #fdfaf4; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 28px; border-radius: 2px }
+.pl-hero .pl-hero-8:hover { background: #7e2f25; color: #fdfaf4 }
+.pl-hero .pl-hero-9 { display: inline-block; border: 1px solid #c8bca6; color: #211d1a; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 15px 28px; border-radius: 2px }
+.pl-hero .pl-hero-9:hover { border-color: #211d1a; color: #211d1a }
+.pl-hero .pl-hero-10 { display: flex; align-items: center; gap: 10px; margin-top: 30px; font-size: 13px; color: #655c4e }
+.pl-hero .pl-hero-11 { width: 18px; height: 1px; background: #c8bca6 }
+.pl-hero .pl-hero-image {position:relative;min-height:560px;background:#262b27;overflow:hidden} .pl-hero .pl-hero-image img,.pl-hero .pl-hero-image svg {width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 30%} @media(max-width:749px){.pl-hero .pl-hero-1 {grid-template-columns:1fr} .pl-hero .pl-hero-2 {padding:52px 24px} .pl-hero .pl-hero-image {min-height:420px}}
+@media(max-width:749px){.pl-hero > :first-child {padding-left:0;padding-right:0}}
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "PL Wholesale hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Hero image"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1",
+      "default": "#register"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2",
+      "default": "#collection"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Scenic Colorado Collection",
+      "default": "Scenic Colorado Collection"
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Colorado postcards,",
+      "default": "Colorado postcards,"
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "lit from within.",
+      "default": "lit from within."
+    },
+    {
+      "type": "textarea",
+      "id": "text_4",
+      "label": "A wholesale line of decorative LED lantern…",
+      "default": "A wholesale line of decorative LED lanterns printed with Colorado scenes, made for souvenir counters, park gift shops, hotels and independent retailers."
+    },
+    {
+      "type": "text",
+      "id": "text_5",
+      "label": "Register for pricing",
+      "default": "Register for pricing"
+    },
+    {
+      "type": "text",
+      "id": "text_6",
+      "label": "Browse the collection",
+      "default": "Browse the collection"
+    },
+    {
+      "type": "text",
+      "id": "text_7",
+      "label": "Trade pricing and ordering unlock once you…",
+      "default": "Trade pricing and ordering unlock once your account is approved."
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
+    }
+  ],
+  "presets": [
+    {
+      "name": "PL Wholesale hero"
+    }
+  ]
+}
+{% endschema %}
