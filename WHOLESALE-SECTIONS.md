@@ -16,8 +16,8 @@ The supplied HTML is split into nine independent sections. Every section contain
 
 ## Installation
 
-1. Upload the nine section files, `layout/postcard-wholesale.liquid` and `templates/page.postcard-wholesale.json` to the theme.
-2. Assign the **postcard-wholesale** template to a Shopify page.
+1. Upload the nine section files, `layout/postcard-wholesale.liquid`, `templates/index.json` and `templates/page.postcard-wholesale.json` to the theme.
+2. The homepage now uses the wholesale design. The **postcard-wholesale** page template is also available if a separate page is needed.
 3. Open that page in the Theme Editor. Each section appears separately with a **PL** prefix and can be edited or reordered. The alternate layout supplies only the reference page's header and footer, avoiding duplicate theme navigation.
 4. Select the hero image and each lantern image. The source references seven local JPEGs which were not included with the HTML. Until images are selected, Shopify placeholders appear. Product blocks can optionally use a selected Shopify product's featured image.
 5. Review login/application URLs, replace the footer contact placeholder and adjust the collection's design-count text if cards are added or removed. Defaults retain the client's `mybocohome.com` wholesale URLs.
