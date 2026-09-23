@@ -1,0 +1,248 @@
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "custom_liquid_mp9tWz": {
+          "type": "custom_liquid",
+          "name": "Upload photo option",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"display:none\" class=\"upload-your-own-designphoto-custom-design-with-2-massage-balls1\">\n        \n<style>.file-upload-container {display: flex;align-items: center;}.file-name {margin-left: 10px;font-style: italic;}</style>\n<div class=\"product-form__input\">\n  <label class=\"form__label\">Upload your own design/photo</label>\n  <div class=\"file-upload-container\">\n    <input id=\"file-upload-your-own-design/photo\" form=\"{{ 'product-form-' | append: section.id }}\" \n    name=\"properties[Upload your own design/photo]\"  style=\"display: none;\" type=\"file\" required />\n    <button id=\"button-upload-your-own-design/photo\" class=\"button\">Upload File</button>\n    <p id=\"fileName-upload-your-own-design/photo\" class=\"file-name\">No file chosen</p>\n    </div>\n    <p id=\"errorMessage\" class=\"error-message\" style=\"display: none;margin-top:0;color:red\">Please upload your file(s).</p>\n</div>\n<script>\ndocument.getElementById('file-upload-your-own-design/photo').addEventListener('change', function(event) {\n      const files = event.target.files;\n      let fileName;\n      if (files.length === 0) {fileName = 'No file chosen';} \n      else if (files.length === 1) {fileName = files[0].name;document.getElementById('errorMessage').style.display = 'none'; } \n      else {fileName = files.length + ' files';document.getElementById('errorMessage').style.display = 'none';}\n      document.getElementById('fileName-upload-your-own-design/photo').textContent = fileName;\n  });\n  document.getElementById('button-upload-your-own-design/photo').addEventListener('click', function() {\n    document.getElementById('file-upload-your-own-design/photo').click();\n  });\n</script>\n\n    <script>\n    document.addEventListener('DOMContentLoaded', () => {\n        document.querySelector('.product-form__submit').addEventListener('click', function(event) {\n        const inputFile = document.getElementById('file-upload-your-own-design/photo');\n        if (!inputFile.files.length && inputFile.required) {\n            document.getElementById('errorMessage').style.display = 'block'; \n        }\n    });})</script>\n\n\n    <script>\n    document.addEventListener(\"DOMContentLoaded\", ()=>{document.querySelector(\"form[novalidate]\").removeAttribute(\"novalidate\")})\n    </script>\n\n    </div>\n    <script>\n    document.addEventListener('DOMContentLoaded', () => {\n        const sanitizeClassName = str => str.replace(/[^a-zA-Z0-9\\s]/g, '').replace(/\\s+/g, '-').toLowerCase();\n        const checkCurrentOption = ()=>{\n            const variantSelects = document.querySelector('variant-selects');\n            const currentValues = Array.from(variantSelects.querySelectorAll('select option[selected], fieldset input:checked')).map(el => el.value);\n            const optionValue = \"custom-design-with-2-massage-balls\"\n            optionsConcerned = [1] \n            required = true\n            selector = \".\" + \"upload-your-own-designphoto-\" + optionValue +  \"1\" \n            selectorInput = selector + \" input\"  + \",\" + selector + \" textarea\" \n            shouldDisplay = optionsConcerned.some(optionIndex => {\n                return currentValues[optionIndex] !== undefined && sanitizeClassName(currentValues[optionIndex]) === optionValue;\n              });\n            document.querySelectorAll(selector).forEach(el =>{\n                if( shouldDisplay){\n                    el.style.display = \"block\"\n                    document.querySelector(selectorInput).setAttribute('form', '{{ 'product-form-' | append: section.id }}')\n                    document.querySelectorAll('.hidden-input-fileupload').forEach(el => el.setAttribute('form', '{{ 'product-form-' | append: section.id }}'))\n                }\n                else{\n                    el.style.display =\"none\"\n                    document.querySelector(selectorInput).setAttribute('form', '');\n                    document.querySelectorAll('.hidden-input-fileupload').forEach(el => el.setAttribute('form', ''))\n                }\n           \n            } );\n            if (required) {\n                const customInput = document.querySelector(selectorInput)\n                if (shouldDisplay) {\n                    customInput.setAttribute('required', 'required');\n                } else {\n                    customInput.removeAttribute('required');\n                }\n            }\n        }\n        checkCurrentOption()\n        document.querySelector(\".product-variant-id\").addEventListener('change', checkCurrentOption)\n    })\n    </script>"
+          }
+        },
+        "custom_liquid_iMc9J6": {
+          "type": "custom_liquid",
+          "name": "\"Other\" Text field",
+          "settings": {
+            "custom_liquid": "<div style=\"display:none\" class=\"other-other1\">\n        <style>.custom.form__label{margin-bottom: 0.6rem}.field.custom{margin-top:0}.custom .field__input{padding-top:0.8rem}</style>  \n<label class=\"form__label custom\" for=\"other\">Other</label>\n<div class=\"field custom\">\n    <input class=\"field__input\" form=\"{{ 'product-form-' | append: section.id }}\" type=\"text\" id=\"other\" name=\"properties[Other]\" required>\n    <script>\n    document.addEventListener(\"DOMContentLoaded\", ()=>{document.querySelector(\"form[novalidate]\").removeAttribute(\"novalidate\")})\n    </script>\n</div>\n    </div>\n    <script>\n    document.addEventListener('DOMContentLoaded', () => {\n        const sanitizeClassName = str => str.replace(/[^a-zA-Z0-9\\s]/g, '').replace(/\\s+/g, '-').toLowerCase();\n        const checkCurrentOption = ()=>{\n            const variantSelects = document.querySelector('variant-selects');\n            const currentValues = Array.from(variantSelects.querySelectorAll('select option[selected], fieldset input:checked')).map(el => el.value);\n            const optionValue = \"other\"\n            optionsConcerned = [1] \n            required = true\n            selector = \".\" + \"other-\" + optionValue +  \"1\" \n            selectorInput = selector + \" input\"  + \",\" + selector + \" textarea\" \n            shouldDisplay = optionsConcerned.some(optionIndex => {\n                return currentValues[optionIndex] !== undefined && sanitizeClassName(currentValues[optionIndex]) === optionValue;\n              });\n            document.querySelectorAll(selector).forEach(el =>{\n                if( shouldDisplay){\n                    el.style.display = \"block\"\n                    document.querySelector(selectorInput).setAttribute('form', '{{ 'product-form-' | append: section.id }}')\n                    document.querySelectorAll('.hidden-input-fileupload').forEach(el => el.setAttribute('form', '{{ 'product-form-' | append: section.id }}'))\n                }\n                else{\n                    el.style.display =\"none\"\n                    document.querySelector(selectorInput).setAttribute('form', '');\n                    document.querySelectorAll('.hidden-input-fileupload').forEach(el => el.setAttribute('form', ''))\n                }\n           \n            } );\n            if (required) {\n                const customInput = document.querySelector(selectorInput)\n                if (shouldDisplay) {\n                    customInput.setAttribute('required', 'required');\n                } else {\n                    customInput.removeAttribute('required');\n                }\n            }\n        }\n        checkCurrentOption()\n        document.querySelector(\".product-variant-id\").addEventListener('change', checkCurrentOption)\n    })\n    </script>"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "complementary_bEmCR8": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Add on:",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "dots",
+            "image_ratio": "portrait",
+            "enable_quick_add": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "custom_liquid_mp9tWz",
+        "custom_liquid_iMc9J6",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "complementary_bEmCR8",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "mobile_thumbnails": "show",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_banner_GYEUMB": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_CwjC3P": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>New!</strong> Ask about our <strong>“Build-a-Salt-Lamp” Workshops!</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_CpRHAA": {
+          "type": "text",
+          "settings": {
+            "text": "Join us at <strong>Bo•Co Home in Loveland, Colorado</strong>, for an immersive, hands-on workshop where you'll design and build your very own salt lamp—while enjoying a fun, creative experience with friends.",
+            "text_style": "body"
+          }
+        },
+        "buttons_mwx38M": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Find out more",
+            "button_link_1": "shopify://pages/build-a-salt-lamp-workshop",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CwjC3P",
+        "text_CpRHAA",
+        "buttons_mwx38M"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_2": "shopify://shop_images/IMG_0083.jpg",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "image_behavior": "zoom-in",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multicolumn_3iwpyD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nGRh6z": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Negative Ions</strong>",
+            "text": "<p>When properly heated, Himalayan salt lamps emit negative ions up to 4 feet around the surface area of the lamp.<br/>The negative ions neutralize positive ions in the air such as:</p><ul><li>Allergens</li><li>EMFS</li><li>Virus & Bacteria</li><li>Odors</li><li>Mold & Mildew</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CUFKnU": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>How They Work</strong>",
+            "text": "<p>Salt naturally attracts moisture from the air.<br/>When the salt is warm, the moisture evaporates.<br/><br/>This action causes negative ions to be released into the air.</p><p><br/>Your salt lamp must have an incandescent light bulb to create the necessary heat.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9dk7L3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>A Calming Effect</strong>",
+            "text": "<p>Negative ions are why the air is so amazing after a thunderstorm and why we feel calm and relaxed at the beach.</p><p><strong>Best Places for a Salt Lamp are:</strong></p><ul><li>Next to a computer</li><li>Where you watch TV</li><li>Nightstand</li><li>By a favorite chair</li><li>Kitchen table</li><li>Child’s room</li><li>Pet area</li></ul>",
+            "link_label": "",
+            "link": "shopify://pages/benefits-of-himalayan-salt-lamps"
+          }
+        }
+      },
+      "block_order": [
+        "column_nGRh6z",
+        "column_CUFKnU",
+        "column_9dk7L3"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Benefits of Himalayan Salt Lamps",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Find out more",
+        "button_link": "shopify://pages/benefits-of-himalayan-salt-lamps",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {}
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "main",
+    "image_banner_GYEUMB",
+    "multicolumn_3iwpyD",
+    "related-products",
+    "zp-product-footer-content"
+  ]
+}

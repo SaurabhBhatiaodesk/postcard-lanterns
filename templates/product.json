@@ -1,0 +1,251 @@
+{
+  "sections": {
+    "zp-product-header-content": {
+      "type": "product-header-content-zipifypages",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "smile_io_smile_points_on_product_page_PkTbmX": {
+          "type": "shopify://apps/smile-io/blocks/smile-points-on-product-page/2fae4e25-1841-4ea2-bc02-bd548478c4f6",
+          "settings": {
+            "primary_colour": "#121212",
+            "secondary_colour": "#f8f8f8",
+            "preview_scenario": "customer_can_earn_points",
+            "should_show_icon": true,
+            "should_show_points_label": true,
+            "points_text_logged_in": "",
+            "points_text_logged_out": ""
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "complementary_bEmCR8": {
+          "type": "complementary",
+          "settings": {
+            "block_heading": "Add on:",
+            "make_collapsible_row": false,
+            "icon": "price_tag",
+            "product_list_limit": 10,
+            "products_per_page": 3,
+            "pagination_style": "dots",
+            "image_ratio": "portrait",
+            "enable_quick_add": true
+          }
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "smile_io_smile_points_on_product_page_PkTbmX",
+        "description",
+        "complementary_bEmCR8",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "image_banner_GYEUMB": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_CwjC3P": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>New!</strong> Ask about our <strong>“Build-a-Salt-Lamp” Workshops!</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_CpRHAA": {
+          "type": "text",
+          "settings": {
+            "text": "Join us at <strong>Bo•Co Home in Loveland, Colorado</strong>, for an immersive, hands-on workshop where you'll design and build your very own salt lamp—while enjoying a fun, creative experience with friends.",
+            "text_style": "body"
+          }
+        },
+        "buttons_mwx38M": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Find out more",
+            "button_link_1": "shopify://pages/build-a-salt-lamp-workshop",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_CwjC3P",
+        "text_CpRHAA",
+        "buttons_mwx38M"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image_2": "shopify://shop_images/IMG_0083.jpg",
+        "image_overlay_opacity": 50,
+        "image_height": "small",
+        "image_behavior": "zoom-in",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "multicolumn_3iwpyD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_nGRh6z": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>Negative Ions</strong>",
+            "text": "<p>When properly heated, Himalayan salt lamps emit negative ions up to 4 feet around the surface area of the lamp.<br/>The negative ions neutralize positive ions in the air such as:</p><ul><li>Allergens</li><li>EMFS</li><li>Virus & Bacteria</li><li>Odors</li><li>Mold & Mildew</li></ul>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_CUFKnU": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>How They Work</strong>",
+            "text": "<p>Salt naturally attracts moisture from the air.<br/>When the salt is warm, the moisture evaporates.<br/><br/>This action causes negative ions to be released into the air.</p><p><br/>Your salt lamp must have an incandescent light bulb to create the necessary heat.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_9dk7L3": {
+          "type": "column",
+          "settings": {
+            "title": "<strong>A Calming Effect</strong>",
+            "text": "<p>Negative ions are why the air is so amazing after a thunderstorm and why we feel calm and relaxed at the beach.</p><p><strong>Best Places for a Salt Lamp are:</strong></p><ul><li>Next to a computer</li><li>Where you watch TV</li><li>Nightstand</li><li>By a favorite chair</li><li>Kitchen table</li><li>Child’s room</li><li>Pet area</li></ul>",
+            "link_label": "",
+            "link": "shopify://pages/benefits-of-himalayan-salt-lamps"
+          }
+        }
+      },
+      "block_order": [
+        "column_nGRh6z",
+        "column_CUFKnU",
+        "column_9dk7L3"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Benefits of Himalayan Salt Lamps",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "Find out more",
+        "button_link": "shopify://pages/benefits-of-himalayan-salt-lamps",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "columns_mobile": "2",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "17619666488f3e213b": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "zp-product-footer-content": {
+      "type": "product-footer-content-zipifypages",
+      "settings": {}
+    }
+  },
+  "order": [
+    "zp-product-header-content",
+    "main",
+    "image_banner_GYEUMB",
+    "multicolumn_3iwpyD",
+    "related-products",
+    "17619666488f3e213b",
+    "zp-product-footer-content"
+  ]
+}
