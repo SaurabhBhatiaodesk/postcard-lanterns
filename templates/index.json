@@ -13,6 +13,7 @@
       "type": "pl-hero",
       "name": "PL Wholesale hero",
       "settings": {
+        "image": "shopify://shop_images/Untitled_design_18.png",
         "link_1": "#register",
         "link_2": "#collection",
         "text_1": "Scenic Colorado Collection",
