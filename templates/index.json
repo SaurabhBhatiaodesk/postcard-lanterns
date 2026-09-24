@@ -1,126 +1,156 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-  "layout": "postcard-wholesale",
   "sections": {
-    "header": {
-      "type": "pl-header",
-      "settings": {}
-    },
-    "hero": {
+    "pl_hero_BtjHcX": {
       "type": "pl-hero",
-      "settings": {}
+      "name": "PL Wholesale hero",
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_18.png",
+        "link_1": "#register",
+        "link_2": "#collection",
+        "text_1": "Scenic Colorado Collection",
+        "text_2": "Colorado postcards,",
+        "text_3": "lit from within.",
+        "text_4": "A wholesale line of decorative LED lanterns printed with Colorado scenes, made for souvenir counters, park gift shops, hotels and independent retailers.",
+        "text_5": "Register for pricing",
+        "text_6": "Browse the collection",
+        "text_7": "Trade pricing and ordering unlock once your account is approved.",
+        "font": "assistant_n4"
+      }
     },
-    "about": {
-      "type": "pl-about",
-      "settings": {}
-    },
-    "collection-heading": {
-      "type": "pl-collection-heading",
-      "settings": {}
-    },
-    "products": {
-      "type": "pl-products",
-      "settings": {},
+    "1776640043e884c01e": {
+      "type": "apps",
       "blocks": {
-        "lantern_1": {
-          "type": "lantern",
+        "loox_reviews_loox_agg_section_XnHzPC": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
           "settings": {
-            "title": "The Elk of Trail Ridge Road",
-            "place": "Rocky Mountain National Park",
-            "description": "Elk grazing the tundra above treeline, printed across all four panels.",
-            "white_only": false
+            "reviews_to_display": "product_store_reviews",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
           }
         },
-        "lantern_2": {
-          "type": "lantern",
+        "loox_reviews_loox_testimonial_carousel_section_fcWRFh": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-testimonial-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
           "settings": {
-            "title": "The Stanley Hotel",
-            "place": "Estes Park",
-            "description": "The hotel's white facade and the Front Range behind it.",
-            "white_only": false
-          }
-        },
-        "lantern_3": {
-          "type": "lantern",
-          "settings": {
-            "title": "Bear Lake",
-            "place": "Rocky Mountain National Park",
-            "description": "Still water and Hallett Peak, one of the park's most visited views.",
-            "white_only": false
-          }
-        },
-        "lantern_4": {
-          "type": "lantern",
-          "settings": {
-            "title": "Alberta Falls",
-            "place": "Rocky Mountain National Park",
-            "description": "Glacier Creek dropping through granite on the Glacier Gorge trail.",
-            "white_only": false
-          }
-        },
-        "lantern_5": {
-          "type": "lantern",
-          "settings": {
-            "title": "Moraine Park Valley",
-            "place": "Rocky Mountain National Park",
-            "description": "The valley floor at golden hour, looking west toward the divide.",
-            "white_only": false
-          }
-        },
-        "lantern_6": {
-          "type": "lantern",
-          "settings": {
-            "title": "Rocky Mountain National Park",
-            "place": "Colorado",
-            "description": "A four-panel park panorama, the anchor design of the collection.",
-            "white_only": false
-          }
-        },
-        "lantern_7": {
-          "type": "lantern",
-          "settings": {
-            "title": "Boulder Flatirons Panorama",
-            "place": "Boulder",
-            "description": "The Flatirons wrapped across the full width of the lantern.",
-            "white_only": true
+            "maxWidth": 1120,
+            "desktopFontSize": 32,
+            "mobileFontSize": 20,
+            "maxNumberOfCharacters": 100,
+            "quoteMarkIcon": "style-1",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "starsColor": "",
+            "quotesIconColor": "#eaeaea",
+            "arrows_iconColor": "#000000",
+            "arrows_hideOnMobile": true,
+            "pagination_active": true,
+            "pagination_selectedDotColor": "#000000",
+            "pagination_dotColor": "#000000",
+            "autoplay_active": false,
+            "autoplay_duration": 2,
+            "productIds": ""
           }
         }
       },
       "block_order": [
-        "lantern_1",
-        "lantern_2",
-        "lantern_3",
-        "lantern_4",
-        "lantern_5",
-        "lantern_6",
-        "lantern_7"
-      ]
+        "loox_reviews_loox_agg_section_XnHzPC",
+        "loox_reviews_loox_testimonial_carousel_section_fcWRFh"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
     },
-    "steps": {
+    "pl_about_3Ajr46": {
+      "type": "pl-about",
+      "name": "PL About",
+      "settings": {
+        "text_1": "About us",
+        "text_2": "Bo•Co Home makes decorative lanterns in Colorado, printing scenic photography onto four-panel LED lanterns that light a room the way a postcard lights a memory.",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_products_DhRNWV": {
+      "type": "pl-products",
+      "name": "PL Product grid",
+      "settings": {
+        "collection": "whats-new",
+        "gate_label": "Wholesale pricing",
+        "white_label": "White",
+        "black_label": "Black",
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_2": "Frame colour",
+        "text_3": "Log in for pricing"
+      }
+    },
+    "pl_steps_3aTgd6": {
       "type": "pl-steps",
-      "settings": {}
+      "name": "PL Wholesale steps",
+      "settings": {
+        "text_1": "How wholesale works",
+        "text_2": "Three steps to trade pricing",
+        "text_3": "01",
+        "text_4": "Browse the line",
+        "text_5": "Every lantern, photograph and frame option is open to view before you apply.",
+        "text_6": "02",
+        "text_7": "Apply for an account",
+        "text_8": "Send your shop details and resale certificate through the form below.",
+        "text_9": "03",
+        "text_10": "Log in and order",
+        "text_11": "Once approved, wholesale pricing and checkout appear the next time you sign in.",
+        "font": "assistant_n4"
+      }
     },
-    "login": {
+    "pl_login_fWehMK": {
       "type": "pl-login",
-      "settings": {}
+      "name": "PL Login banner",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Already approved? Sign in to see your pricing.",
+        "text_2": "Log in",
+        "font": "assistant_n4"
+      }
     },
-    "registration": {
+    "pl_registration_aJaMJ7": {
       "type": "pl-registration",
-      "settings": {}
-    },
-    "footer": {
-      "type": "pl-footer",
-      "settings": {}
+      "name": "PL Registration",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/wholesale-registration-form",
+        "link_2": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Wholesale registration",
+        "text_2": "Apply for a trade account",
+        "text_3": "Registration takes a couple of minutes. Applications are reviewed by hand, and we will email you as soon as your account is approved, usually within two business days.",
+        "text_4": "Start your application",
+        "text_5": "Already have an account",
+        "text_6": "Minimums and case quantities shown after approval",
+        "text_7": "·",
+        "text_8": "Custom and institutional orders quoted separately",
+        "font": "assistant_n4"
+      }
     }
   },
   "order": [
-    "header",
-    "hero",
-    "about",
-    "collection-heading",
-    "products",
-    "steps",
-    "login",
-    "registration",
-    "footer"
+    "pl_hero_BtjHcX",
+    "1776640043e884c01e",
+    "pl_about_3Ajr46",
+    "pl_products_DhRNWV",
+    "pl_steps_3aTgd6",
+    "pl_login_fWehMK",
+    "pl_registration_aJaMJ7"
   ]
 }
