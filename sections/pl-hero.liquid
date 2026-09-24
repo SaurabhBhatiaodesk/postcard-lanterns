@@ -4,7 +4,7 @@
 #PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
 {% endstyle %}
 <div id="PL-{{ section.id }}" class="pl-hero">
-<section class="pl-hero-1">
+<section class="pl-hero-1 page-width">
     <div class="pl-hero-2">
       <div class="pl-hero-3">{{ section.settings.text_1 | escape }}</div>
       <h1 class="pl-hero-4">{{ section.settings.text_2 | escape }}<br><em class="pl-hero-5">{{ section.settings.text_3 | escape }}</em></h1>
@@ -25,7 +25,7 @@
 {% stylesheet %}
 .pl-hero {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-hero *, .pl-hero *::before, .pl-hero *::after {box-sizing:border-box} .pl-hero a {color:#a03f32;text-decoration:none} .pl-hero a:hover {color:#7e2f25} .pl-hero a:focus-visible, .pl-hero select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-hero select {font-family:inherit} .pl-hero h1,.pl-hero h2,.pl-hero h3 {color:inherit} .pl-hero [id] {scroll-margin-top:110px}
 .pl-hero .pl-hero-1 { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); align-items: stretch; background: #f7f3ea }
-.pl-hero .pl-hero-2 { padding: 92px 56px 92px 40px; max-width: 680px }
+.pl-hero .pl-hero-2 { padding: 92px 56px 92px 0; min-width: 0 }
 .pl-hero .pl-hero-3 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #a03f32 }
 .pl-hero .pl-hero-4 { font-family: var(--pl-font); font-weight: 500; font-size: clamp(38px, 5.2vw, 64px); line-height: 1.04; letter-spacing: -0.015em; margin: 22px 0 0; text-wrap: pretty }
 .pl-hero .pl-hero-5 { font-style: italic }
@@ -37,8 +37,8 @@
 .pl-hero .pl-hero-9:hover { border-color: #211d1a; color: #211d1a }
 .pl-hero .pl-hero-10 { display: flex; align-items: center; gap: 10px; margin-top: 30px; font-size: 13px; color: #655c4e }
 .pl-hero .pl-hero-11 { width: 18px; height: 1px; background: #c8bca6 }
-.pl-hero .pl-hero-image {position:relative;min-height:560px;background:#262b27;overflow:hidden} .pl-hero .pl-hero-image img,.pl-hero .pl-hero-image svg {width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 30%} @media(max-width:749px){.pl-hero .pl-hero-1 {grid-template-columns:1fr} .pl-hero .pl-hero-2 {padding:52px 24px} .pl-hero .pl-hero-image {min-height:420px}}
-@media(max-width:749px){.pl-hero > :first-child {padding-left:0;padding-right:0}}
+.pl-hero .pl-hero-image {position:relative;min-height:560px;background:#262b27;overflow:hidden} .pl-hero .pl-hero-image img,.pl-hero .pl-hero-image svg {width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 30%} @media(max-width:749px){.pl-hero .pl-hero-1 {grid-template-columns:1fr} .pl-hero .pl-hero-2 {padding:52px 0} .pl-hero .pl-hero-image {min-height:420px}}
+
 {% endstylesheet %}
 
 {% schema %}
