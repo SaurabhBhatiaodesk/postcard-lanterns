@@ -73,7 +73,7 @@
                   {% assign card_image = lantern.featured_image %}
                   {% assign hover_image = lantern.media[1].preview_image %}
 
-                  <div class="pl-products-image">
+                  <div class="pl-products-image{% if card_image != blank and hover_image != blank %} pl-products-image--has-hover{% endif %}">
 
                     {% if card_image != blank %}
 
@@ -405,11 +405,11 @@
 
   @media (hover: hover) and (pointer: fine) {
 
-    .pl-products .pl-products-4:hover .pl-product-image-hover {
+    .pl-products .pl-products-4:hover .pl-products-image--has-hover .pl-product-image-hover {
       opacity: 1;
     }
 
-    .pl-products .pl-products-4:hover .pl-product-image-main {
+    .pl-products .pl-products-4:hover .pl-products-image--has-hover .pl-product-image-main {
       opacity: 0;
     }
 
