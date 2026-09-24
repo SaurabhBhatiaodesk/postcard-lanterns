@@ -104,23 +104,6 @@
         "font": "assistant_n4"
       }
     },
-    "pl_registration_aJaMJ7": {
-      "type": "pl-registration",
-      "name": "PL Registration",
-      "settings": {
-        "link_1": "https://mybocohome.com/pages/wholesale-registration-form",
-        "link_2": "https://mybocohome.com/pages/ws-account-login",
-        "text_1": "Wholesale registration",
-        "text_2": "Apply for a trade account",
-        "text_3": "Registration takes a couple of minutes. Applications are reviewed by hand, and we will email you as soon as your account is approved, usually within two business days.",
-        "text_4": "Start your application",
-        "text_5": "Already have an account",
-        "text_6": "Minimums and case quantities shown after approval",
-        "text_7": "·",
-        "text_8": "Custom and institutional orders quoted separately",
-        "font": "assistant_n4"
-      }
-    },
     "pl_about_3Ajr46": {
       "type": "pl-about",
       "name": "PL About",
@@ -225,6 +208,23 @@
         "text_3": "Log in for pricing",
         "font": "assistant_n4"
       }
+    },
+    "pl_registration_aJaMJ7": {
+      "type": "pl-registration",
+      "name": "PL Registration",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/wholesale-registration-form",
+        "link_2": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Wholesale registration",
+        "text_2": "Apply for a trade account",
+        "text_3": "Registration takes a couple of minutes. Applications are reviewed by hand, and we will email you as soon as your account is approved, usually within two business days.",
+        "text_4": "Start your application",
+        "text_5": "Already have an account",
+        "text_6": "Minimums and case quantities shown after approval",
+        "text_7": "·",
+        "text_8": "Custom and institutional orders quoted separately",
+        "font": "assistant_n4"
+      }
     }
   },
   "order": [
@@ -232,8 +232,8 @@
     "1776640043e884c01e",
     "pl_login_fWehMK",
     "pl_steps_3aTgd6",
-    "pl_registration_aJaMJ7",
     "pl_about_3Ajr46",
-    "pl_products_DhRNWV"
+    "pl_products_DhRNWV",
+    "pl_registration_aJaMJ7"
   ]
 }
