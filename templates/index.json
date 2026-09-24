@@ -89,13 +89,25 @@
       "type": "pl-products",
       "name": "PL Product grid",
       "settings": {
-        "collection": "whats-new",
+        "collection": "introducing-new-our-four-ball-salt-lamps",
+        "columns": 3,
+        "padding_top": 40,
+        "padding_bottom": 96,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 64,
+        "background_color": "#f7f3ea",
+        "heading_color": "#211d1a",
+        "text_color": "#554e45",
+        "muted_color": "#6b6153",
+        "link_color": "#a03f32",
+        "link_hover_color": "#7e2f25",
+        "image_background": "#efe8da",
+        "select_background": "#fdfaf4",
+        "border_color": "#e2d9c8",
         "gate_label": "Wholesale pricing",
-        "white_label": "White",
-        "black_label": "Black",
         "link_1": "https://mybocohome.com/pages/ws-account-login",
-        "text_2": "Frame colour",
-        "text_3": "Log in for pricing"
+        "text_3": "Log in for pricing",
+        "font": "assistant_n4"
       }
     },
     "pl_steps_3aTgd6": {
