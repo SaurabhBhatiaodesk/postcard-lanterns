@@ -1,54 +1,105 @@
-{% comment %}
-PL Product Grid - Collection Based Version
-Select collection from customizer and products will render automatically.
-{% endcomment %}
+{% style %}
+
+{{ section.settings.font | font_face: font_display: 'swap' }}
+
+{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
+
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; --pl-columns: {{ section.settings.columns }}; }
+
+{% endstyle %}
 
 <div id="PL-{{ section.id }}" class="pl-products">
+
 <section class="pl-products-1">
-<div class="pl-products-2">
 
-{% assign collection = section.settings.collection %}
+    <div class="pl-products-2">
 
-{% if collection != blank %}
-{% for product in collection.products %}
+      {% assign selected_collection = section.settings.collection %}
+{% if selected_collection != blank %}
+  {% for lantern in selected_collection.products %}
+    <div class="pl-products-block">
+      <article class="pl-products-3">
+        <div class="pl-products-4">
+          {% assign card_image = lantern.featured_image %}
+          <div class="pl-products-image">
+            {% if card_image != blank %}
+              {{ card_image | image_url: width: 900 | image_tag: widths: '300, 450, 600, 900', sizes: '(min-width: 990px) 33vw, (min-width: 550px) 50vw, 100vw', loading: 'lazy' }}
+            {% else %}
+              {{ 'product-1' | placeholder_svg_tag: 'pl-products-placeholder' }}
+            {% endif %}
+          </div>
+        </div>
 
-<article class="pl-products-3">
+        <h3 class="pl-products-6">{{ lantern.title | escape }}</h3>
+        <div class="pl-products-7">{{ lantern.vendor | escape }}</div>
+        <p class="pl-products-8">{{ lantern.description | strip_html | truncate: 160 }}</p>
 
-<div class="pl-products-4">
-{% if product.featured_image %}
-{{ product.featured_image | image_url: width:900 | image_tag: loading:'lazy' }}
-{% else %}
-{{ 'product-1' | placeholder_svg_tag }}
+        <div class="pl-products-9">
+          <label for="Frame-{{ section.id }}-{{ lantern.id }}" class="pl-products-10">
+            {{ section.settings.text_2 | escape }}
+          </label>
+
+          <select id="Frame-{{ section.id }}-{{ lantern.id }}" name="frame" class="pl-products-11">
+            <option value="White">{{ section.settings.white_label | escape }}</option>
+            <option value="Black">{{ section.settings.black_label | escape }}</option>
+          </select>
+
+          <div class="pl-products-12">
+            <span class="pl-products-13">{{ section.settings.gate_label | escape }}</span>
+            <a href="{{ section.settings.link_1 | escape }}" class="pl-products-14">
+              {{ section.settings.text_3 | escape }}
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  {% endfor %}
 {% endif %}
-</div>
-
-<h3 class="pl-products-6">{{ product.title }}</h3>
-
-<p class="pl-products-8">
-{{ product.description | strip_html | truncate:120 }}
-</p>
-
-<div class="pl-products-9">
-<label class="pl-products-10">{{ section.settings.text_2 }}</label>
-<select class="pl-products-11">
-<option>{{ section.settings.white_label }}</option>
-<option>{{ section.settings.black_label }}</option>
-</select>
-
-<div class="pl-products-12">
-<span class="pl-products-13">{{ section.settings.gate_label }}</span>
-<a href="{{ section.settings.link_1 }}" class="pl-products-14">{{ section.settings.text_3 }}</a>
-</div>
-</div>
-
-</article>
-
-{% endfor %}
-{% endif %}
+</div></section>
 
 </div>
-</section>
-</div>
+
+
+
+{% stylesheet %}
+
+.pl-products {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-products *, .pl-products *::before, .pl-products *::after {box-sizing:border-box} .pl-products a {color:#a03f32;text-decoration:none} .pl-products a:hover {color:#7e2f25} .pl-products a:focus-visible, .pl-products select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-products select {font-family:inherit} .pl-products h1,.pl-products h2,.pl-products h3 {color:inherit} .pl-products [id] {scroll-margin-top:110px}
+
+.pl-products .pl-products-1 { padding: 40px 40px 96px }
+
+.pl-products .pl-products-2 { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(var(--pl-columns), minmax(0, 1fr)); gap: 40px 32px }
+
+.pl-products .pl-products-3 { display: flex; flex-direction: column }
+
+.pl-products .pl-products-4 { position: relative; background: #efe8da; border: 1px solid #e2d9c8; overflow: hidden }
+
+.pl-products .pl-products-5 { position: absolute; top: 12px; left: 12px; background: rgba(247,243,234,0.94); color: #554e45; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 10px; border-radius: 2px }
+
+.pl-products .pl-products-6 { font-family: var(--pl-font); font-weight: 500; font-size: 21px; line-height: 1.25; margin: 20px 0 0 }
+
+.pl-products .pl-products-7 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6153; margin-top: 7px }
+
+.pl-products .pl-products-8 { font-size: 14px; line-height: 1.65; color: #554e45; margin: 12px 0 0 }
+
+.pl-products .pl-products-9 { margin-top: auto; padding-top: 20px }
+
+.pl-products .pl-products-10 { display: block; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #655c4e; margin-bottom: 7px }
+
+.pl-products .pl-products-11 { width: 100%; appearance: none; background: #fdfaf4; border: 1px solid #d9cdb8; border-radius: 2px; padding: 11px 14px; font-size: 14px; color: #211d1a }
+
+.pl-products .pl-products-12 { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; border-top: 1px solid #e2d9c8; padding-top: 14px }
+
+.pl-products .pl-products-13 { font-size: 12px; letter-spacing: 0.06em; color: #6b6153 }
+
+.pl-products .pl-products-14 { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #a03f32 }
+
+.pl-products .pl-products-block,.pl-products article {height:100%;min-width:0} .pl-products .pl-products-image {aspect-ratio:3/4} .pl-products .pl-products-image img,.pl-products .pl-products-image svg {display:block;width:100%;height:100%;object-fit:cover} .pl-products select {cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,#655c4e 50%),linear-gradient(135deg,#655c4e 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 14px) 50%;background-size:4px 4px;background-repeat:no-repeat;padding-right:32px} @media(max-width:989px){.pl-products .pl-products-2 {grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:549px){.pl-products .pl-products-2 {grid-template-columns:1fr}}
+
+@media(max-width:749px){.pl-products > :first-child {padding-left:24px;padding-right:24px}}
+
+{% endstylesheet %}
+
+
 
 {% schema %}
 {
@@ -57,7 +108,16 @@ Select collection from customizer and products will render automatically.
     {
       "type": "collection",
       "id": "collection",
-      "label": "Select Collection"
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "columns",
+      "label": "Desktop columns",
+      "min": 2,
+      "max": 4,
+      "step": 1,
+      "default": 3
     },
     {
       "type": "text",
@@ -80,7 +140,14 @@ Select collection from customizer and products will render automatically.
     {
       "type": "text",
       "id": "link_1",
-      "label": "Login Link"
+      "label": "Link 1",
+      "default": "https://mybocohome.com/pages/ws-account-login"
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "White only",
+      "default": "White only"
     },
     {
       "type": "text",
@@ -91,8 +158,14 @@ Select collection from customizer and products will render automatically.
     {
       "type": "text",
       "id": "text_3",
-      "label": "Login Text",
+      "label": "Log in for pricing",
       "default": "Log in for pricing"
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
     }
   ],
   "presets": [
