@@ -39,6 +39,18 @@
 .pl-hero .pl-hero-11 { width: 18px; height: 1px; background: #c8bca6 }
 .pl-hero .pl-hero-image {position:relative;min-height:560px;background:#262b27;overflow:hidden} .pl-hero .pl-hero-image img,.pl-hero .pl-hero-image svg {width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:center 30%} @media(max-width:749px){.pl-hero .pl-hero-1 {grid-template-columns:1fr} .pl-hero .pl-hero-2 {padding:52px 0} .pl-hero .pl-hero-image {min-height:420px}}
 
+/* pl-mobile */
+@media(max-width:989px){.pl-hero .pl-hero-2 {padding-right:32px}}
+@media(max-width:749px){
+  .pl-hero .pl-hero-2 {padding:40px 0 32px}
+  .pl-hero .pl-hero-4 {font-size:clamp(32px,9vw,40px);line-height:1.08;margin-top:16px}
+  .pl-hero .pl-hero-6 {font-size:15px;line-height:1.6;margin-top:18px;max-width:none}
+  .pl-hero .pl-hero-7 {flex-direction:column;gap:10px;margin-top:26px}
+  .pl-hero .pl-hero-8,.pl-hero .pl-hero-9 {display:flex;align-items:center;justify-content:center;min-height:48px;padding:14px 20px;text-align:center}
+  .pl-hero .pl-hero-10 {align-items:flex-start;margin-top:22px;font-size:12px;line-height:1.5}
+  .pl-hero .pl-hero-11 {flex-shrink:0;margin-top:9px}
+  .pl-hero .pl-hero-image {min-height:0;aspect-ratio:4/5;margin-bottom:40px}
+}
 {% endstylesheet %}
 
 {% schema %}
