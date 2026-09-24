@@ -19,30 +19,63 @@
   {% for lantern in selected_collection.products %}
     <div class="pl-products-block">
       <article class="pl-products-3">
+
         <div class="pl-products-4">
-          {% assign card_image = lantern.featured_image %}
-          <div class="pl-products-image">
-            {% if card_image != blank %}
-              {{ card_image | image_url: width: 900 | image_tag: widths: '300, 450, 600, 900', sizes: '(min-width: 990px) 33vw, (min-width: 550px) 50vw, 100vw', loading: 'lazy' }}
-            {% else %}
-              {{ 'product-1' | placeholder_svg_tag: 'pl-products-placeholder' }}
-            {% endif %}
-          </div>
+          <a href="{{ lantern.url }}" aria-label="{{ lantern.title | escape }}">
+            {% assign card_image = lantern.featured_image %}
+            <div class="pl-products-image">
+              {% if card_image != blank %}
+                {{ card_image
+                  | image_url: width: 900
+                  | image_tag:
+                    widths: '300, 450, 600, 900',
+                    sizes: '(min-width: 990px) 33vw, (min-width: 550px) 50vw, 100vw',
+                    loading: 'lazy',
+                    alt: lantern.title
+                }}
+              {% else %}
+                {{ 'product-1' | placeholder_svg_tag: 'pl-products-placeholder' }}
+              {% endif %}
+            </div>
+          </a>
         </div>
 
-        <h3 class="pl-products-6">{{ lantern.title | escape }}</h3>
-        <div class="pl-products-7">{{ lantern.vendor | escape }}</div>
-        <p class="pl-products-8">{{ lantern.description | strip_html | truncate: 160 }}</p>
+        <h3 class="pl-products-6">
+          <a href="{{ lantern.url }}">{{ lantern.title | escape }}</a>
+        </h3>
+
+        {% if lantern.vendor != blank %}
+          <div class="pl-products-7">{{ lantern.vendor | escape }}</div>
+        {% endif %}
+
+        {% if lantern.description != blank %}
+          <p class="pl-products-8">
+            {{ lantern.description | strip_html | truncate: 160 }}
+          </p>
+        {% endif %}
 
         <div class="pl-products-9">
-          <label for="Frame-{{ section.id }}-{{ lantern.id }}" class="pl-products-10">
-            {{ section.settings.text_2 | escape }}
-          </label>
+          {% assign frame_option = blank %}
 
-          <select id="Frame-{{ section.id }}-{{ lantern.id }}" name="frame" class="pl-products-11">
-            <option value="White">{{ section.settings.white_label | escape }}</option>
-            <option value="Black">{{ section.settings.black_label | escape }}</option>
-          </select>
+          {% for option in lantern.options_with_values %}
+            {% assign option_name_downcase = option.name | downcase %}
+            {% if option_name_downcase contains 'frame' or option_name_downcase == 'color' or option_name_downcase == 'colour' %}
+              {% assign frame_option = option %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
+
+          {% if frame_option != blank %}
+            <label for="Frame-{{ section.id }}-{{ lantern.id }}" class="pl-products-10">
+              {{ frame_option.name | escape }}
+            </label>
+
+            <select id="Frame-{{ section.id }}-{{ lantern.id }}" name="frame" class="pl-products-11">
+              {% for value in frame_option.values %}
+                <option value="{{ value | escape }}">{{ value | escape }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
 
           <div class="pl-products-12">
             <span class="pl-products-13">{{ section.settings.gate_label | escape }}</span>
@@ -51,6 +84,7 @@
             </a>
           </div>
         </div>
+
       </article>
     </div>
   {% endfor %}
