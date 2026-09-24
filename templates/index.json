@@ -76,16 +76,6 @@
         "include_margins": true
       }
     },
-    "pl_login_fWehMK": {
-      "type": "pl-login",
-      "name": "PL Login banner",
-      "settings": {
-        "link_1": "https://mybocohome.com/pages/ws-account-login",
-        "text_1": "Already approved? Sign in to see your pricing.",
-        "text_2": "Log in",
-        "font": "assistant_n4"
-      }
-    },
     "pl_about_3Ajr46": {
       "type": "pl-about",
       "name": "PL About",
@@ -209,6 +199,16 @@
         "font": "assistant_n4"
       }
     },
+    "pl_login_fWehMK": {
+      "type": "pl-login",
+      "name": "PL Login banner",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Already approved? Sign in to see your pricing.",
+        "text_2": "Log in",
+        "font": "assistant_n4"
+      }
+    },
     "pl_registration_aJaMJ7": {
       "type": "pl-registration",
       "name": "PL Registration",
@@ -230,10 +230,10 @@
   "order": [
     "pl_hero_BtjHcX",
     "1776640043e884c01e",
-    "pl_login_fWehMK",
     "pl_about_3Ajr46",
     "pl_products_DhRNWV",
     "pl_steps_3aTgd6",
+    "pl_login_fWehMK",
     "pl_registration_aJaMJ7"
   ]
 }
