@@ -1,8 +1,17 @@
 {% style %}
 {{ section.settings.font | font_face: font_display: 'swap' }}
 {% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
-#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
+#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; --pl-logo-width: {{ section.settings.logo_width }}px; --pl-logo-width-mobile: {{ section.settings.logo_width_mobile }}px; }
 {% endstyle %}
+{% capture brand_logo %}
+  {%- if section.settings.logo != blank -%}
+    {%- assign logo_alt = section.settings.logo.alt | default: shop.name -%}
+    {%- capture logo_sizes -%}(min-width: 750px) {{ section.settings.logo_width }}px, {{ section.settings.logo_width_mobile }}px{%- endcapture -%}
+    {{ section.settings.logo | image_url: width: 600 | image_tag: class: 'pl-header-logo', widths: '150, 300, 450, 600', sizes: logo_sizes, alt: logo_alt, loading: 'eager' }}
+  {%- else -%}
+    <span class="pl-header-3">{{ section.settings.text_1 | default: shop.name | escape }}</span>
+  {%- endif -%}
+{% endcapture %}
 {% capture navigation_links %}
   {% if section.settings.menu != blank %}
     {% for link in section.settings.menu.links %}
@@ -40,17 +49,17 @@
 {% endcapture %}
 <pl-mobile-header id="PL-{{ section.id }}" class="pl-header">
 <header class="pl-header-1 page-width">
-    <div class="pl-header-2">
-      <span class="pl-header-3">{{ section.settings.text_1 | escape }}</span>
-      <span class="pl-header-4">{{ section.settings.text_2 | escape }}</span>
-    </div>
+    <a href="{{ routes.root_url }}" class="pl-header-2">
+      {{ brand_logo }}
+      {% if section.settings.text_2 != blank %}<span class="pl-header-4">{{ section.settings.text_2 | escape }}</span>{% endif %}
+    </a>
     <nav class="pl-header-5" aria-label="{{ section.settings.menu_label | escape }}">{{ navigation_links }}</nav>
     <button class="pl-header-toggle" type="button" aria-label="{{ section.settings.menu_label | escape }}" aria-expanded="false" aria-controls="PL-Menu-{{ section.id }}" aria-haspopup="dialog">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <dialog id="PL-Menu-{{ section.id }}" class="pl-header-drawer" aria-label="{{ section.settings.menu_label | escape }}">
       <div class="pl-header-drawer-top">
-        <span class="pl-header-3">{{ section.settings.text_1 | escape }}</span>
+        <a href="{{ routes.root_url }}" class="pl-header-2">{{ brand_logo }}</a>
         <button class="pl-header-close" type="button" aria-label="{{ section.settings.close_label | escape }}" autofocus>
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
         </button>
@@ -63,7 +72,10 @@
 {% stylesheet %}
 .pl-header {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-header *, .pl-header *::before, .pl-header *::after {box-sizing:border-box} .pl-header a {color:#a03f32;text-decoration:none} .pl-header a:hover {color:#7e2f25} .pl-header a:focus-visible, .pl-header select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-header select {font-family:inherit} .pl-header h1,.pl-header h2,.pl-header h3 {color:inherit} .pl-header [id] {scroll-margin-top:110px}
 .pl-header .pl-header-1 { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-top: 18px; padding-bottom: 18px; background: #f7f3ea; position: sticky; top: 0; z-index: 20 }
-.pl-header .pl-header-2 { display: flex; align-items: baseline; gap: 10px }
+.pl-header .pl-header-2 { display: flex; align-items: center; gap: 10px; min-width: 0 }
+.pl-header a.pl-header-2, .pl-header a.pl-header-2:hover { color: #211d1a }
+.pl-header .pl-header-logo { display: block; width: var(--pl-logo-width); max-width: 100%; height: auto }
+@media(max-width:749px){.pl-header .pl-header-logo {width:var(--pl-logo-width-mobile)}}
 .pl-header .pl-header-3 { font-family: var(--pl-font); font-weight: 600; font-size: 20px; letter-spacing: 0.02em }
 .pl-header .pl-header-4 { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #655c4e; border-left: 1px solid #d9cdb8; padding-left: 10px }
 .pl-header .pl-header-5 { display: flex; align-items: center; gap: 22px }
@@ -154,10 +166,125 @@ if (!customElements.get('pl-mobile-header')) {
   "name": "PL Wholesale header",
   "settings": [
     {
+      "type": "header",
+      "content": "Logo"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image",
+      "info": "Links to the homepage. If no logo is selected, the store name text below is shown."
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo width (desktop)",
+      "min": 50,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "default": 150
+    },
+    {
+      "type": "range",
+      "id": "logo_width_mobile",
+      "label": "Logo width (mobile)",
+      "min": 40,
+      "max": 200,
+      "step": 5,
+      "unit": "px",
+      "default": 110
+    },
+    {
+      "type": "text",
+      "id": "text_1",
+      "label": "Store name text",
+      "default": "Postcard Lanterns",
+      "info": "Shown when no logo is selected."
+    },
+    {
+      "type": "text",
+      "id": "text_2",
+      "label": "Tag next to logo",
+      "default": "Wholesale",
+      "info": "Leave blank to hide."
+    },
+    {
+      "type": "header",
+      "content": "Menu"
+    },
+    {
       "type": "link_list",
       "id": "menu",
       "label": "Menu",
       "info": "Shown on desktop and in the mobile drawer. If no menu is selected, the fallback links below are used. The wholesale button is configured separately."
+    },
+    {
+      "type": "paragraph",
+      "content": "Fallback links are used only when no menu is selected."
+    },
+    {
+      "type": "text",
+      "id": "text_3",
+      "label": "Fallback link 1 text",
+      "default": "Collection"
+    },
+    {
+      "type": "text",
+      "id": "link_1",
+      "label": "Fallback link 1 URL",
+      "default": "#collection"
+    },
+    {
+      "type": "text",
+      "id": "text_4",
+      "label": "Fallback link 2 text",
+      "default": "How it works"
+    },
+    {
+      "type": "text",
+      "id": "link_2",
+      "label": "Fallback link 2 URL",
+      "default": "#how"
+    },
+    {
+      "type": "text",
+      "id": "text_5",
+      "label": "Fallback link 3 text",
+      "default": "Log in"
+    },
+    {
+      "type": "text",
+      "id": "link_3",
+      "label": "Fallback link 3 URL",
+      "default": "https://mybocohome.com/pages/ws-account-login"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "text_6",
+      "label": "Button text",
+      "default": "Apply for wholesale",
+      "info": "Leave blank to hide."
+    },
+    {
+      "type": "text",
+      "id": "link_4",
+      "label": "Button URL",
+      "default": "#register"
+    },
+    {
+      "type": "header",
+      "content": "Style & accessibility"
+    },
+    {
+      "type": "font_picker",
+      "id": "font",
+      "label": "Font",
+      "default": "assistant_n4"
     },
     {
       "type": "text",
@@ -170,72 +297,6 @@ if (!customElements.get('pl-mobile-header')) {
       "id": "close_label",
       "label": "Close menu accessibility label",
       "default": "Close menu"
-    },
-    {
-      "type": "text",
-      "id": "link_1",
-      "label": "Link 1",
-      "default": "#collection"
-    },
-    {
-      "type": "text",
-      "id": "link_2",
-      "label": "Link 2",
-      "default": "#how"
-    },
-    {
-      "type": "text",
-      "id": "link_3",
-      "label": "Link 3",
-      "default": "https://mybocohome.com/pages/ws-account-login"
-    },
-    {
-      "type": "text",
-      "id": "link_4",
-      "label": "Link 4",
-      "default": "#register"
-    },
-    {
-      "type": "text",
-      "id": "text_1",
-      "label": "Postcard Lanterns",
-      "default": "Postcard Lanterns"
-    },
-    {
-      "type": "text",
-      "id": "text_2",
-      "label": "Wholesale",
-      "default": "Wholesale"
-    },
-    {
-      "type": "text",
-      "id": "text_3",
-      "label": "Collection",
-      "default": "Collection"
-    },
-    {
-      "type": "text",
-      "id": "text_4",
-      "label": "How it works",
-      "default": "How it works"
-    },
-    {
-      "type": "text",
-      "id": "text_5",
-      "label": "Log in",
-      "default": "Log in"
-    },
-    {
-      "type": "text",
-      "id": "text_6",
-      "label": "Apply for wholesale",
-      "default": "Apply for wholesale"
-    },
-    {
-      "type": "font_picker",
-      "id": "font",
-      "label": "Font",
-      "default": "assistant_n4"
     }
   ],
   "presets": [
