@@ -86,24 +86,6 @@
         "font": "assistant_n4"
       }
     },
-    "pl_steps_3aTgd6": {
-      "type": "pl-steps",
-      "name": "PL Wholesale steps",
-      "settings": {
-        "text_1": "How wholesale works",
-        "text_2": "Three steps to trade pricing",
-        "text_3": "01",
-        "text_4": "Browse the line",
-        "text_5": "Every lantern, photograph and frame option is open to view before you apply.",
-        "text_6": "02",
-        "text_7": "Apply for an account",
-        "text_8": "Send your shop details and resale certificate through the form below.",
-        "text_9": "03",
-        "text_10": "Log in and order",
-        "text_11": "Once approved, wholesale pricing and checkout appear the next time you sign in.",
-        "font": "assistant_n4"
-      }
-    },
     "pl_about_3Ajr46": {
       "type": "pl-about",
       "name": "PL About",
@@ -209,6 +191,24 @@
         "font": "assistant_n4"
       }
     },
+    "pl_steps_3aTgd6": {
+      "type": "pl-steps",
+      "name": "PL Wholesale steps",
+      "settings": {
+        "text_1": "How wholesale works",
+        "text_2": "Three steps to trade pricing",
+        "text_3": "01",
+        "text_4": "Browse the line",
+        "text_5": "Every lantern, photograph and frame option is open to view before you apply.",
+        "text_6": "02",
+        "text_7": "Apply for an account",
+        "text_8": "Send your shop details and resale certificate through the form below.",
+        "text_9": "03",
+        "text_10": "Log in and order",
+        "text_11": "Once approved, wholesale pricing and checkout appear the next time you sign in.",
+        "font": "assistant_n4"
+      }
+    },
     "pl_registration_aJaMJ7": {
       "type": "pl-registration",
       "name": "PL Registration",
@@ -231,9 +231,9 @@
     "pl_hero_BtjHcX",
     "1776640043e884c01e",
     "pl_login_fWehMK",
-    "pl_steps_3aTgd6",
     "pl_about_3Ajr46",
     "pl_products_DhRNWV",
+    "pl_steps_3aTgd6",
     "pl_registration_aJaMJ7"
   ]
 }
