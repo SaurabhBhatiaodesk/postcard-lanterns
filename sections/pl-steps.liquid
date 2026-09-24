@@ -5,7 +5,7 @@
 {% endstyle %}
 <div id="PL-{{ section.id }}" class="pl-steps">
 <section id="how" class="pl-steps-1">
-    <div class="pl-steps-2">
+    <div class="pl-steps-2 page-width">
       <div class="pl-steps-3">{{ section.settings.text_1 | escape }}</div>
       <h2 class="pl-steps-4">{{ section.settings.text_2 | escape }}</h2>
       <div class="pl-steps-5">
@@ -31,8 +31,7 @@
 
 {% stylesheet %}
 .pl-steps {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-steps *, .pl-steps *::before, .pl-steps *::after {box-sizing:border-box} .pl-steps a {color:#a03f32;text-decoration:none} .pl-steps a:hover {color:#7e2f25} .pl-steps a:focus-visible, .pl-steps select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-steps select {font-family:inherit} .pl-steps h1,.pl-steps h2,.pl-steps h3 {color:inherit} .pl-steps [id] {scroll-margin-top:110px}
-.pl-steps .pl-steps-1 { background: #262b27; color: #f3ede1; padding: 88px 40px }
-.pl-steps .pl-steps-2 { max-width: 1080px; margin: 0 auto }
+.pl-steps .pl-steps-1 { background: #262b27; color: #f3ede1; padding: 88px 0 }
 .pl-steps .pl-steps-3 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #d79a86 }
 .pl-steps .pl-steps-4 { font-family: var(--pl-font); font-weight: 500; font-size: 34px; letter-spacing: -0.01em; margin: 14px 0 0; color: #fdfaf4 }
 .pl-steps .pl-steps-5 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-top: 52px }
@@ -49,7 +48,7 @@
 .pl-steps .pl-steps-16 { font-family: var(--pl-font); font-weight: 500; font-size: 22px; margin: 14px 0 0; color: #fdfaf4 }
 .pl-steps .pl-steps-17 { font-size: 14px; line-height: 1.7; color: #c3bdae; margin: 10px 0 0 }
 
-@media(max-width:749px){.pl-steps > :first-child {padding-left:24px;padding-right:24px}}
+
 {% endstylesheet %}
 
 {% schema %}
