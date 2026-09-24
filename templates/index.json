@@ -87,98 +87,15 @@
     },
     "pl_products_DhRNWV": {
       "type": "pl-products",
-      "blocks": {
-        "lantern_zm98Ea": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "The Elk of Trail Ridge Road",
-            "place": "Rocky Mountain National Park",
-            "description": "Elk grazing the tundra above treeline, printed across all four panels.",
-            "white_only": false
-          }
-        },
-        "lantern_QapPJA": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "The Stanley Hotel",
-            "place": "Estes Park",
-            "description": "The hotel's white facade and the Front Range behind it.",
-            "white_only": false
-          }
-        },
-        "lantern_yGWbRY": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "Bear Lake",
-            "place": "Rocky Mountain National Park",
-            "description": "Still water and Hallett Peak, one of the park's most visited views.",
-            "white_only": false
-          }
-        },
-        "lantern_8FETAb": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "Alberta Falls",
-            "place": "Rocky Mountain National Park",
-            "description": "Glacier Creek dropping through granite on the Glacier Gorge trail.",
-            "white_only": false
-          }
-        },
-        "lantern_JYNifN": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "Moraine Park Valley",
-            "place": "Rocky Mountain National Park",
-            "description": "The valley floor at golden hour, looking west toward the divide.",
-            "white_only": false
-          }
-        },
-        "lantern_DUekWE": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "Rocky Mountain National Park",
-            "place": "Colorado",
-            "description": "A four-panel park panorama, the anchor design of the collection.",
-            "white_only": false
-          }
-        },
-        "lantern_gR8grG": {
-          "type": "lantern",
-          "settings": {
-            "product": "",
-            "title": "Boulder Flatirons Panorama",
-            "place": "Boulder",
-            "description": "The Flatirons wrapped across the full width of the lantern.",
-            "white_only": true
-          }
-        }
-      },
-      "block_order": [
-        "lantern_zm98Ea",
-        "lantern_QapPJA",
-        "lantern_yGWbRY",
-        "lantern_8FETAb",
-        "lantern_JYNifN",
-        "lantern_DUekWE",
-        "lantern_gR8grG"
-      ],
       "name": "PL Product grid",
       "settings": {
-        "columns": 3,
+        "collection": "whats-new",
         "gate_label": "Wholesale pricing",
         "white_label": "White",
         "black_label": "Black",
         "link_1": "https://mybocohome.com/pages/ws-account-login",
-        "text_1": "White only",
         "text_2": "Frame colour",
-        "text_3": "Log in for pricing",
-        "font": "assistant_n4"
+        "text_3": "Log in for pricing"
       }
     },
     "pl_steps_3aTgd6": {
