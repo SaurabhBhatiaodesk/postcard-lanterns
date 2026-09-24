@@ -1,60 +1,532 @@
 {% style %}
-{{ section.settings.font | font_face: font_display: 'swap' }}
-{% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
-#PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; --pl-columns: {{ section.settings.columns }}; }
+
+  {{ section.settings.font | font_face: font_display: 'swap' }}
+
+  {% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}
+  {{ medium_font | font_face: font_display: 'swap' }}
+
+  #PL-{{ section.id }} {
+    --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }};
+    --pl-columns: {{ section.settings.columns }};
+
+    --pl-bg: {{ section.settings.background_color }};
+    --pl-text: {{ section.settings.text_color }};
+    --pl-heading: {{ section.settings.heading_color }};
+    --pl-muted: {{ section.settings.muted_color }};
+    --pl-link: {{ section.settings.link_color }};
+    --pl-link-hover: {{ section.settings.link_hover_color }};
+
+    --pl-image-bg: {{ section.settings.image_background }};
+    --pl-border: {{ section.settings.border_color }};
+    --pl-select-bg: {{ section.settings.select_background }};
+
+    --pl-padding-top: {{ section.settings.padding_top }}px;
+    --pl-padding-bottom: {{ section.settings.padding_bottom }}px;
+
+    --pl-padding-top-mobile: {{ section.settings.padding_top_mobile }}px;
+    --pl-padding-bottom-mobile: {{ section.settings.padding_bottom_mobile }}px;
+  }
+
 {% endstyle %}
+
+
 <div id="PL-{{ section.id }}" class="pl-products">
-<section class="pl-products-1">
-    <div class="pl-products-2">
-      {% for block in section.blocks %}{% assign lantern = block.settings.product %}<div class="pl-products-block" {{ block.shopify_attributes }}>
-        <article class="pl-products-3">
-          <div class="pl-products-4">
-            {% assign card_image = block.settings.image | default: lantern.featured_image %}<div class="pl-products-image">{% if card_image != blank %}{{ card_image | image_url: width: 900 | image_tag: widths: '300, 450, 600, 900', sizes: '(min-width: 990px) 33vw, (min-width: 550px) 50vw, 100vw', loading: 'lazy' }}{% else %}{{ 'product-1' | placeholder_svg_tag: 'pl-products-placeholder' }}{% endif %}</div>
-            {% if block.settings.white_only %}
-              <div class="pl-products-5">{{ section.settings.text_1 | escape }}</div>
-            {% endif %}
+
+  <section class="pl-products-1">
+
+    <div class="pl-products-2 page-width">
+
+      {% assign selected_collection = section.settings.collection %}
+
+      {% if selected_collection != blank %}
+
+        {% for lantern in selected_collection.products %}
+
+          <div class="pl-products-block">
+
+            <article class="pl-products-3">
+
+              <div class="pl-products-4">
+
+                <a
+                  href="{{ lantern.url }}"
+                  aria-label="{{ lantern.title | escape }}"
+                  class="pl-products-image-link"
+                >
+
+                  {% assign card_image = lantern.featured_image %}
+
+                  <div class="pl-products-image">
+
+                    {% if card_image != blank %}
+
+                      {{
+                        card_image
+                        | image_url: width: 1200
+                        | image_tag:
+                          widths: '300, 450, 600, 900, 1200',
+                          sizes: '(min-width: 990px) 33vw, 50vw',
+                          loading: 'lazy',
+                          alt: lantern.title
+                      }}
+
+                    {% else %}
+
+                      {{ 'product-1' | placeholder_svg_tag: 'pl-products-placeholder' }}
+
+                    {% endif %}
+
+                  </div>
+
+                </a>
+
+              </div>
+
+
+              <h3 class="pl-products-6">
+
+                <a href="{{ lantern.url }}">
+                  {{ lantern.title | escape }}
+                </a>
+
+              </h3>
+
+
+              {% if lantern.vendor != blank %}
+
+                <div class="pl-products-7">
+                  {{ lantern.vendor | escape }}
+                </div>
+
+              {% endif %}
+
+
+              {% if lantern.description != blank %}
+
+                <div class="pl-products-8">
+                  {{ lantern.description | strip_html | truncate: 160 }}
+                </div>
+
+              {% endif %}
+
+
+              <div class="pl-products-9">
+
+                {% assign frame_option = blank %}
+
+                {% for option in lantern.options_with_values %}
+
+                  {% assign option_name_downcase = option.name | downcase %}
+
+                  {% if option_name_downcase contains 'frame'
+                    or option_name_downcase == 'color'
+                    or option_name_downcase == 'colour'
+                  %}
+
+                    {% assign frame_option = option %}
+                    {% break %}
+
+                  {% endif %}
+
+                {% endfor %}
+
+
+                {% if frame_option != blank %}
+
+                  <label
+                    for="Frame-{{ section.id }}-{{ lantern.id }}"
+                    class="pl-products-10"
+                  >
+                    {{ frame_option.name | escape }}
+                  </label>
+
+
+                  <select
+                    id="Frame-{{ section.id }}-{{ lantern.id }}"
+                    name="frame"
+                    class="pl-products-11"
+                  >
+
+                    {% for value in frame_option.values %}
+
+                      <option value="{{ value | escape }}">
+                        {{ value | escape }}
+                      </option>
+
+                    {% endfor %}
+
+                  </select>
+
+                {% endif %}
+
+
+                <div class="pl-products-12">
+
+                  <span class="pl-products-13">
+                    {{ section.settings.gate_label | escape }}
+                  </span>
+
+                  {% if section.settings.link_1 != blank %}
+                    <a
+                      href="{{ section.settings.link_1 }}"
+                      class="pl-products-14"
+                    >
+                      {{ section.settings.text_3 | escape }}
+                    </a>
+                  {% endif %}
+
+                </div>
+
+              </div>
+
+            </article>
+
           </div>
-          <h3 class="pl-products-6">{{ block.settings.title | default: lantern.title | escape }}</h3>
-          <div class="pl-products-7">{{ block.settings.place | escape }}</div>
-          <p class="pl-products-8">{{ block.settings.description | escape }}</p>
-          <div class="pl-products-9">
-            <label for="Frame-{{ section.id }}-{{ block.id }}" class="pl-products-10">{{ section.settings.text_2 | escape }}</label>
-            <select id="Frame-{{ section.id }}-{{ block.id }}" name="frame" class="pl-products-11">
-              <option value="White">{{ section.settings.white_label | escape }}</option>{% unless block.settings.white_only %}<option value="Black">{{ section.settings.black_label | escape }}</option>{% endunless %}
-            </select>
-            <div class="pl-products-12">
-              <span class="pl-products-13">{{ section.settings.gate_label | escape }}</span>
-              <a href="{{ section.settings.link_1 | escape }}" class="pl-products-14">{{ section.settings.text_3 | escape }}</a>
-            </div>
-          </div>
-        </article>
-      </div>{% endfor %}</div></section>
+
+        {% endfor %}
+
+      {% else %}
+
+        <div class="pl-products-empty">
+          Please select a collection from the section settings.
+        </div>
+
+      {% endif %}
+
+    </div>
+
+  </section>
+
 </div>
 
+
 {% stylesheet %}
-.pl-products {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-products *, .pl-products *::before, .pl-products *::after {box-sizing:border-box} .pl-products a {color:#a03f32;text-decoration:none} .pl-products a:hover {color:#7e2f25} .pl-products a:focus-visible, .pl-products select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-products select {font-family:inherit} .pl-products h1,.pl-products h2,.pl-products h3 {color:inherit} .pl-products [id] {scroll-margin-top:110px}
-.pl-products .pl-products-1 { padding: 40px 40px 96px }
-.pl-products .pl-products-2 { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(var(--pl-columns), minmax(0, 1fr)); gap: 40px 32px }
-.pl-products .pl-products-3 { display: flex; flex-direction: column }
-.pl-products .pl-products-4 { position: relative; background: #efe8da; border: 1px solid #e2d9c8; overflow: hidden }
-.pl-products .pl-products-5 { position: absolute; top: 12px; left: 12px; background: rgba(247,243,234,0.94); color: #554e45; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; padding: 6px 10px; border-radius: 2px }
-.pl-products .pl-products-6 { font-family: var(--pl-font); font-weight: 500; font-size: 21px; line-height: 1.25; margin: 20px 0 0 }
-.pl-products .pl-products-7 { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #6b6153; margin-top: 7px }
-.pl-products .pl-products-8 { font-size: 14px; line-height: 1.65; color: #554e45; margin: 12px 0 0 }
-.pl-products .pl-products-9 { margin-top: auto; padding-top: 20px }
-.pl-products .pl-products-10 { display: block; font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: #655c4e; margin-bottom: 7px }
-.pl-products .pl-products-11 { width: 100%; appearance: none; background: #fdfaf4; border: 1px solid #d9cdb8; border-radius: 2px; padding: 11px 14px; font-size: 14px; color: #211d1a }
-.pl-products .pl-products-12 { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 14px; border-top: 1px solid #e2d9c8; padding-top: 14px }
-.pl-products .pl-products-13 { font-size: 12px; letter-spacing: 0.06em; color: #6b6153 }
-.pl-products .pl-products-14 { font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #a03f32 }
-.pl-products .pl-products-block,.pl-products article {height:100%;min-width:0} .pl-products .pl-products-image {aspect-ratio:3/4} .pl-products .pl-products-image img,.pl-products .pl-products-image svg {display:block;width:100%;height:100%;object-fit:cover} .pl-products select {cursor:pointer;background-image:linear-gradient(45deg,transparent 50%,#655c4e 50%),linear-gradient(135deg,#655c4e 50%,transparent 50%);background-position:calc(100% - 18px) 50%,calc(100% - 14px) 50%;background-size:4px 4px;background-repeat:no-repeat;padding-right:32px} @media(max-width:989px){.pl-products .pl-products-2 {grid-template-columns:repeat(2,minmax(0,1fr))}} @media(max-width:549px){.pl-products .pl-products-2 {grid-template-columns:1fr}}
-@media(max-width:749px){.pl-products > :first-child {padding-left:24px;padding-right:24px}}
+
+  .pl-products {
+    font-family: var(--pl-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: normal;
+    color: var(--pl-text);
+    background: var(--pl-bg);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .pl-products *,
+  .pl-products *::before,
+  .pl-products *::after {
+    box-sizing: border-box;
+  }
+
+  .pl-products a {
+    color: var(--pl-link);
+    text-decoration: none;
+  }
+
+  .pl-products a:hover {
+    color: var(--pl-link-hover);
+  }
+
+  .pl-products a:focus-visible,
+  .pl-products select:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  .pl-products select {
+    font-family: inherit;
+  }
+
+  .pl-products h1,
+  .pl-products h2,
+  .pl-products h3 {
+    color: inherit;
+  }
+
+  .pl-products [id] {
+    scroll-margin-top: 110px;
+  }
+
+
+  .pl-products .pl-products-1 {
+    padding-top: var(--pl-padding-top);
+    padding-bottom: var(--pl-padding-bottom);
+  }
+
+
+  .pl-products .pl-products-2 {
+    display: grid;
+    grid-template-columns:
+      repeat(var(--pl-columns), minmax(0, 1fr));
+    gap: 40px 32px;
+  }
+
+
+  .pl-products .pl-products-block {
+    height: 100%;
+    min-width: 0;
+  }
+
+
+  .pl-products .pl-products-3 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+  }
+
+
+  .pl-products .pl-products-4 {
+    position: relative;
+    background: var(--pl-image-bg);
+    border: 1px solid var(--pl-border);
+    overflow: hidden;
+  }
+
+
+  .pl-products .pl-products-image-link {
+    display: block;
+    width: 100%;
+  }
+
+
+  .pl-products .pl-products-image {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    overflow: hidden;
+    background: var(--pl-image-bg);
+  }
+
+
+  .pl-products .pl-products-image img,
+  .pl-products .pl-products-image svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .pl-products .pl-products-placeholder {
+    background: var(--pl-image-bg);
+  }
+
+
+  .pl-products .pl-products-6 {
+    font-family: var(--pl-font);
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 1.25;
+    margin: 20px 0 0;
+    color: var(--pl-heading);
+  }
+
+
+  .pl-products .pl-products-6 a {
+    color: inherit;
+  }
+
+
+  .pl-products .pl-products-6 a:hover {
+    color: var(--pl-link-hover);
+  }
+
+
+  .pl-products .pl-products-7 {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pl-muted);
+    margin-top: 7px;
+  }
+
+
+  .pl-products .pl-products-8 {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--pl-text);
+    margin-top: 12px;
+  }
+
+
+  .pl-products .pl-products-9 {
+    margin-top: auto;
+    padding-top: 20px;
+  }
+
+
+  .pl-products .pl-products-10 {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pl-muted);
+    margin-bottom: 7px;
+  }
+
+
+  .pl-products .pl-products-11 {
+    width: 100%;
+    appearance: none;
+    -webkit-appearance: none;
+
+    background-color: var(--pl-select-bg);
+    border: 1px solid var(--pl-border);
+    border-radius: 2px;
+
+    padding: 11px 32px 11px 14px;
+
+    font-size: 14px;
+    color: var(--pl-text);
+
+    cursor: pointer;
+
+    background-image:
+      linear-gradient(
+        45deg,
+        transparent 50%,
+        var(--pl-muted) 50%
+      ),
+      linear-gradient(
+        135deg,
+        var(--pl-muted) 50%,
+        transparent 50%
+      );
+
+    background-position:
+      calc(100% - 18px) 50%,
+      calc(100% - 14px) 50%;
+
+    background-size: 4px 4px;
+    background-repeat: no-repeat;
+  }
+
+
+  .pl-products .pl-products-12 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    margin-top: 14px;
+    border-top: 1px solid var(--pl-border);
+    padding-top: 14px;
+  }
+
+
+  .pl-products .pl-products-13 {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: var(--pl-muted);
+  }
+
+
+  .pl-products .pl-products-14 {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--pl-link);
+  }
+
+
+  .pl-products .pl-products-14:hover {
+    color: var(--pl-link-hover);
+  }
+
+
+  .pl-products .pl-products-empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px 20px;
+    color: var(--pl-muted);
+  }
+
+
+  @media screen and (max-width: 989px) {
+
+    .pl-products .pl-products-2 {
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+    }
+
+  }
+
+
+  @media screen and (max-width: 749px) {
+
+    .pl-products .pl-products-1 {
+      padding-top: var(--pl-padding-top-mobile);
+      padding-bottom: var(--pl-padding-bottom-mobile);
+    }
+
+    .pl-products .pl-products-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 12px;
+    }
+
+    .pl-products .pl-products-6 {
+      font-size: 16px;
+      line-height: 1.3;
+      margin-top: 12px;
+      overflow-wrap: anywhere;
+    }
+
+    .pl-products .pl-products-8 {
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+    .pl-products .pl-products-7 {
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      overflow-wrap: anywhere;
+    }
+    .pl-products .pl-products-9 { padding-top: 16px; }
+    .pl-products .pl-products-11 {
+      min-height: 44px;
+      font-size: 16px;
+      padding-left: 10px;
+    }
+    .pl-products .pl-products-12 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      margin-top: 12px;
+      padding-top: 10px;
+    }
+    .pl-products .pl-products-13 { font-size: 11px; }
+    .pl-products .pl-products-14 {
+      display: flex;
+      align-items: center;
+      min-height: 44px;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      overflow-wrap: anywhere;
+    }
+
+  }
+
 {% endstylesheet %}
+
 
 {% schema %}
 {
   "name": "PL Product grid",
   "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+
     {
       "type": "range",
       "id": "columns",
@@ -64,48 +536,154 @@
       "step": 1,
       "default": 3
     },
+
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding top - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 40
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding bottom - desktop",
+      "min": 0,
+      "max": 160,
+      "step": 4,
+      "unit": "px",
+      "default": 96
+    },
+
+    {
+      "type": "range",
+      "id": "padding_top_mobile",
+      "label": "Padding top - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 32
+    },
+
+    {
+      "type": "range",
+      "id": "padding_bottom_mobile",
+      "label": "Padding bottom - mobile",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 64
+    },
+
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#f7f3ea"
+    },
+
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#211d1a"
+    },
+
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#554e45"
+    },
+
+    {
+      "type": "color",
+      "id": "muted_color",
+      "label": "Secondary text color",
+      "default": "#6b6153"
+    },
+
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link color",
+      "default": "#a03f32"
+    },
+
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover color",
+      "default": "#7e2f25"
+    },
+
+    {
+      "type": "color",
+      "id": "image_background",
+      "label": "Image background",
+      "default": "#efe8da"
+    },
+
+    {
+      "type": "color",
+      "id": "select_background",
+      "label": "Option background",
+      "default": "#fdfaf4"
+    },
+
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#e2d9c8"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+
     {
       "type": "text",
       "id": "gate_label",
       "label": "Pricing note",
       "default": "Wholesale pricing"
     },
+
     {
-      "type": "text",
-      "id": "white_label",
-      "label": "White option",
-      "default": "White"
-    },
-    {
-      "type": "text",
-      "id": "black_label",
-      "label": "Black option",
-      "default": "Black"
-    },
-    {
-      "type": "text",
+      "type": "url",
       "id": "link_1",
-      "label": "Link 1",
-      "default": "https://mybocohome.com/pages/ws-account-login"
+      "label": "Login link"
     },
-    {
-      "type": "text",
-      "id": "text_1",
-      "label": "White only",
-      "default": "White only"
-    },
-    {
-      "type": "text",
-      "id": "text_2",
-      "label": "Frame colour",
-      "default": "Frame colour"
-    },
+
     {
       "type": "text",
       "id": "text_3",
-      "label": "Log in for pricing",
+      "label": "Login text",
       "default": "Log in for pricing"
     },
+
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+
     {
       "type": "font_picker",
       "id": "font",
@@ -113,116 +691,10 @@
       "default": "assistant_n4"
     }
   ],
+
   "presets": [
     {
-      "name": "PL Product grid",
-      "blocks": [
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "The Elk of Trail Ridge Road",
-            "place": "Rocky Mountain National Park",
-            "description": "Elk grazing the tundra above treeline, printed across all four panels.",
-            "white_only": false
-          }
-        },
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "The Stanley Hotel",
-            "place": "Estes Park",
-            "description": "The hotel's white facade and the Front Range behind it.",
-            "white_only": false
-          }
-        },
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "Bear Lake",
-            "place": "Rocky Mountain National Park",
-            "description": "Still water and Hallett Peak, one of the park's most visited views.",
-            "white_only": false
-          }
-        },
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "Alberta Falls",
-            "place": "Rocky Mountain National Park",
-            "description": "Glacier Creek dropping through granite on the Glacier Gorge trail.",
-            "white_only": false
-          }
-        },
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "Moraine Park Valley",
-            "place": "Rocky Mountain National Park",
-            "description": "The valley floor at golden hour, looking west toward the divide.",
-            "white_only": false
-          }
-        },
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "Rocky Mountain National Park",
-            "place": "Colorado",
-            "description": "A four-panel park panorama, the anchor design of the collection.",
-            "white_only": false
-          }
-        },
-        {
-          "type": "lantern",
-          "settings": {
-            "title": "Boulder Flatirons Panorama",
-            "place": "Boulder",
-            "description": "The Flatirons wrapped across the full width of the lantern.",
-            "white_only": true
-          }
-        }
-      ]
-    }
-  ],
-  "max_blocks": 50,
-  "blocks": [
-    {
-      "type": "lantern",
-      "name": "Lantern",
-      "settings": [
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Product (optional image/title source)"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title",
-          "default": "Postcard lantern"
-        },
-        {
-          "type": "text",
-          "id": "place",
-          "label": "Location",
-          "default": "Colorado"
-        },
-        {
-          "type": "textarea",
-          "id": "description",
-          "label": "Description"
-        },
-        {
-          "type": "checkbox",
-          "id": "white_only",
-          "label": "White frame only",
-          "default": false
-        }
-      ]
+      "name": "PL Product grid"
     }
   ]
 }

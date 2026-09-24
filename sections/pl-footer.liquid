@@ -5,7 +5,7 @@
 {% endstyle %}
 <div id="PL-{{ section.id }}" class="pl-footer">
 <footer class="pl-footer-1">
-    <div class="pl-footer-2">
+    <div class="pl-footer-2 page-width">
       <div class="pl-footer-3">{{ section.settings.text_1 | escape }} <span class="pl-footer-4">{{ section.settings.text_2 | escape }}</span></div>
       <div class="pl-footer-5">{{ section.settings.text_3 | escape }} <a href="{{ section.settings.link_1 | escape }}">{{ section.settings.text_4 | escape }}</a></div>
     </div>
@@ -14,13 +14,13 @@
 
 {% stylesheet %}
 .pl-footer {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-footer *, .pl-footer *::before, .pl-footer *::after {box-sizing:border-box} .pl-footer a {color:#a03f32;text-decoration:none} .pl-footer a:hover {color:#7e2f25} .pl-footer a:focus-visible, .pl-footer select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-footer select {font-family:inherit} .pl-footer h1,.pl-footer h2,.pl-footer h3 {color:inherit} .pl-footer [id] {scroll-margin-top:110px}
-.pl-footer .pl-footer-1 { background: #efe8da; border-top: 1px solid #e2d9c8; padding: 44px 40px }
-.pl-footer .pl-footer-2 { max-width: 1080px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap }
+.pl-footer .pl-footer-1 { background: #efe8da; border-top: 1px solid #e2d9c8; padding: 44px 0 }
+.pl-footer .pl-footer-2 { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap }
 .pl-footer .pl-footer-3 { font-family: var(--pl-font); font-size: 17px }
 .pl-footer .pl-footer-4 { color: #6b6153; font-family: var(--pl-font); font-size: 13px }
 .pl-footer .pl-footer-5 { font-size: 13px; color: #655c4e }
 
-@media(max-width:749px){.pl-footer > :first-child {padding-left:24px;padding-right:24px}}
+
 {% endstylesheet %}
 
 {% schema %}

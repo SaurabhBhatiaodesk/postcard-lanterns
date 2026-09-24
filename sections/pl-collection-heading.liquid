@@ -5,7 +5,7 @@
 {% endstyle %}
 <div id="PL-{{ section.id }}" class="pl-collection-heading">
 <section id="collection" class="pl-collection-heading-1">
-    <div class="pl-collection-heading-2">
+    <div class="pl-collection-heading-2 page-width">
       <div class="pl-collection-heading-3">
         <div>
           <div class="pl-collection-heading-4">{{ section.settings.text_1 | escape }}</div>
@@ -19,14 +19,13 @@
 
 {% stylesheet %}
 .pl-collection-heading {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-collection-heading *, .pl-collection-heading *::before, .pl-collection-heading *::after {box-sizing:border-box} .pl-collection-heading a {color:#a03f32;text-decoration:none} .pl-collection-heading a:hover {color:#7e2f25} .pl-collection-heading a:focus-visible, .pl-collection-heading select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-collection-heading select {font-family:inherit} .pl-collection-heading h1,.pl-collection-heading h2,.pl-collection-heading h3 {color:inherit} .pl-collection-heading [id] {scroll-margin-top:110px}
-.pl-collection-heading .pl-collection-heading-1 { padding: 84px 40px 24px }
-.pl-collection-heading .pl-collection-heading-2 { max-width: 1180px; margin: 0 auto }
+.pl-collection-heading .pl-collection-heading-1 { padding: 84px 0 24px }
 .pl-collection-heading .pl-collection-heading-3 { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; border-bottom: 1px solid #e2d9c8; padding-bottom: 20px }
 .pl-collection-heading .pl-collection-heading-4 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #a03f32 }
 .pl-collection-heading .pl-collection-heading-5 { font-family: var(--pl-font); font-weight: 500; font-size: 34px; letter-spacing: -0.01em; margin: 12px 0 0 }
 .pl-collection-heading .pl-collection-heading-6 { font-size: 13px; color: #655c4e }
 
-@media(max-width:749px){.pl-collection-heading > :first-child {padding-left:24px;padding-right:24px}}
+
 {% endstylesheet %}
 
 {% schema %}
