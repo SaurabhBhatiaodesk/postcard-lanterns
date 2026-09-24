@@ -13,10 +13,6 @@
       "type": "pl-about",
       "settings": {}
     },
-    "collection-heading": {
-      "type": "pl-collection-heading",
-      "settings": {}
-    },
     "products": {
       "type": "pl-products",
       "settings": {},
@@ -116,7 +112,6 @@
     "header",
     "hero",
     "about",
-    "collection-heading",
     "products",
     "steps",
     "login",

@@ -32,11 +32,27 @@
 
 <div id="PL-{{ section.id }}" class="pl-products">
 
-  <section class="pl-products-1">
+  <section id="collection" class="pl-products-1">
 
     <div class="pl-products-2 page-width">
 
       {% assign selected_collection = section.settings.collection %}
+
+      {% if section.settings.show_heading %}
+        <div class="pl-products-heading">
+          <div>
+            {% if section.settings.eyebrow != blank %}
+              <p class="pl-products-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+            {% endif %}
+            {% if section.settings.title != blank %}
+              <h2 class="pl-products-title">{{ section.settings.title | escape }}</h2>
+            {% endif %}
+          </div>
+          <p class="pl-products-summary">
+            {{ section.settings.availability_text | escape }}{% if section.settings.show_count and selected_collection != blank %}{% if section.settings.availability_text != blank %} &middot; {% endif %}{{ selected_collection.products_count }} {{ section.settings.count_label | escape }}{% endif %}
+          </p>
+        </div>
+      {% endif %}
 
       {% if selected_collection != blank %}
 
@@ -287,6 +303,44 @@
     min-width: 0;
   }
 
+  .pl-products .pl-products-heading {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px 32px;
+    border-bottom: 1px solid var(--pl-border);
+    padding-bottom: 20px;
+  }
+
+  .pl-products .pl-products-eyebrow {
+    margin: 0;
+    color: var(--pl-link);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  .pl-products .pl-products-title {
+    margin: 18px 0 0;
+    color: var(--pl-heading);
+    font-family: var(--pl-font);
+    font-size: 38px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    overflow-wrap: anywhere;
+  }
+
+  .pl-products .pl-products-summary {
+    margin: 0;
+    color: var(--pl-muted);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
 
   .pl-products .pl-products-3 {
     display: flex;
@@ -511,6 +565,10 @@
 
   @media screen and (max-width: 749px) {
 
+    .pl-products .pl-products-heading { gap: 14px; }
+    .pl-products .pl-products-title { font-size: 28px; margin-top: 12px; }
+    .pl-products .pl-products-summary { font-size: 13px; }
+
     .pl-products .pl-products-1 {
       padding-top: var(--pl-padding-top-mobile);
       padding-bottom: var(--pl-padding-bottom-mobile);
@@ -570,6 +628,13 @@
 {
   "name": "PL Product grid",
   "settings": [
+    { "type": "header", "content": "Collection heading" },
+    { "type": "checkbox", "id": "show_heading", "label": "Show heading", "default": true },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "The collection" },
+    { "type": "text", "id": "title", "label": "Heading", "default": "Scenic Colorado Postcard Lanterns" },
+    { "type": "text", "id": "availability_text", "label": "Availability text", "default": "Available in black and white" },
+    { "type": "checkbox", "id": "show_count", "label": "Show collection product count", "default": true },
+    { "type": "text", "id": "count_label", "label": "Count label", "default": "designs" },
     {
       "type": "collection",
       "id": "collection",
