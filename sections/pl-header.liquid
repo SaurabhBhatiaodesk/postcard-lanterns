@@ -4,10 +4,39 @@
 #PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
 {% endstyle %}
 {% capture navigation_links %}
+  {% if section.settings.menu != blank %}
+    {% for link in section.settings.menu.links %}
+      <div class="pl-header-menu-item">
+        <a href="{{ link.url | escape }}" class="pl-header-6"{% if link.current %} aria-current="page"{% endif %}>{{ link.title | escape }}</a>
+        {% if link.links != blank %}
+          <details class="pl-header-submenu">
+            <summary aria-label="{{ link.title | escape }}"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" aria-hidden="true"><path d="m3 5 4 4 4-4"/></svg></summary>
+            <ul class="pl-header-submenu-list">
+              {% for child_link in link.links %}
+                <li>
+                  <a href="{{ child_link.url | escape }}"{% if child_link.current %} aria-current="page"{% endif %}>{{ child_link.title | escape }}</a>
+                  {% if child_link.links != blank %}
+                    <ul>
+                      {% for grandchild_link in child_link.links %}
+                        <li><a href="{{ grandchild_link.url | escape }}"{% if grandchild_link.current %} aria-current="page"{% endif %}>{{ grandchild_link.title | escape }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        {% endif %}
+      </div>
+    {% endfor %}
+  {% else %}
   <a href="{{ section.settings.link_1 | escape }}" class="pl-header-6">{{ section.settings.text_3 | escape }}</a>
   <a href="{{ section.settings.link_2 | escape }}" class="pl-header-7">{{ section.settings.text_4 | escape }}</a>
   <a href="{{ section.settings.link_3 | escape }}" class="pl-header-8">{{ section.settings.text_5 | escape }}</a>
+  {% endif %}
+  {% if section.settings.link_4 != blank and section.settings.text_6 != blank %}
   <a href="{{ section.settings.link_4 | escape }}" class="pl-header-9">{{ section.settings.text_6 | escape }}</a>
+  {% endif %}
 {% endcapture %}
 <pl-mobile-header id="PL-{{ section.id }}" class="pl-header">
 <header class="pl-header-1 page-width">
@@ -46,6 +75,18 @@
 .shopify-section:has(> .pl-header) {position:sticky;top:0;z-index:20} .pl-header .pl-header-5 {flex-wrap:wrap} @media(max-width:749px){.pl-header .pl-header-1 {gap:16px} .pl-header .pl-header-5 {gap:14px}}
 
 .pl-header {display:block;border-bottom:1px solid #e2d9c8}
+.pl-header .pl-header-menu-item {display:flex;align-items:center;position:relative;gap:4px}
+.pl-header .pl-header-submenu summary {display:flex;align-items:center;justify-content:center;min-width:44px;min-height:44px;cursor:pointer;list-style:none}
+.pl-header .pl-header-submenu summary::-webkit-details-marker {display:none}
+.pl-header .pl-header-submenu summary:focus-visible {outline:2px solid #a03f32;outline-offset:2px}
+.pl-header .pl-header-submenu-list {position:absolute;top:100%;left:0;z-index:25;min-width:220px;margin:0;padding:12px;list-style:none;background:#f7f3ea;border:1px solid #e2d9c8;box-shadow:0 8px 20px #0001}
+.pl-header .pl-header-submenu-list ul {list-style:none;margin:0;padding-left:16px}
+.pl-header .pl-header-submenu-list a {display:block;padding:10px;font-size:14px;color:#4a443c;overflow-wrap:anywhere}
+.pl-header .pl-header-drawer-links .pl-header-menu-item {display:block}
+.pl-header .pl-header-drawer-links .pl-header-menu-item > a {display:block;padding-right:44px}
+.pl-header .pl-header-drawer-links .pl-header-submenu summary {position:absolute;top:4px;right:0}
+.pl-header .pl-header-drawer-links .pl-header-submenu-list {position:static;min-width:0;border:0;box-shadow:none;padding:0 0 8px 12px}
+.pl-header .pl-header-drawer-links .pl-header-submenu-list a {padding:10px 0;font-size:14px}
 .pl-header .pl-header-toggle,.pl-header .pl-header-close {align-items:center;justify-content:center;width:44px;height:44px;flex-shrink:0;padding:10px;border:0;background:transparent;color:#211d1a;cursor:pointer}
 .pl-header .pl-header-toggle {display:none}
 .pl-header .pl-header-close {display:flex}
@@ -112,6 +153,12 @@ if (!customElements.get('pl-mobile-header')) {
 {
   "name": "PL Wholesale header",
   "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Menu",
+      "info": "Shown on desktop and in the mobile drawer. If no menu is selected, the fallback links below are used. The wholesale button is configured separately."
+    },
     {
       "type": "text",
       "id": "menu_label",
