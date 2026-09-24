@@ -75,10 +75,165 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "pl_login_fWehMK": {
+      "type": "pl-login",
+      "name": "PL Login banner",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Already approved? Sign in to see your pricing.",
+        "text_2": "Log in",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_steps_3aTgd6": {
+      "type": "pl-steps",
+      "name": "PL Wholesale steps",
+      "settings": {
+        "text_1": "How wholesale works",
+        "text_2": "Three steps to trade pricing",
+        "text_3": "01",
+        "text_4": "Browse the line",
+        "text_5": "Every lantern, photograph and frame option is open to view before you apply.",
+        "text_6": "02",
+        "text_7": "Apply for an account",
+        "text_8": "Send your shop details and resale certificate through the form below.",
+        "text_9": "03",
+        "text_10": "Log in and order",
+        "text_11": "Once approved, wholesale pricing and checkout appear the next time you sign in.",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_registration_aJaMJ7": {
+      "type": "pl-registration",
+      "name": "PL Registration",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/wholesale-registration-form",
+        "link_2": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Wholesale registration",
+        "text_2": "Apply for a trade account",
+        "text_3": "Registration takes a couple of minutes. Applications are reviewed by hand, and we will email you as soon as your account is approved, usually within two business days.",
+        "text_4": "Start your application",
+        "text_5": "Already have an account",
+        "text_6": "Minimums and case quantities shown after approval",
+        "text_7": "·",
+        "text_8": "Custom and institutional orders quoted separately",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_about_3Ajr46": {
+      "type": "pl-about",
+      "name": "PL About",
+      "settings": {
+        "text_1": "About us",
+        "text_2": "Bo•Co Home makes decorative lanterns in Colorado, printing scenic photography onto four-panel LED lanterns that light a room the way a postcard lights a memory.",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_products_DhRNWV": {
+      "type": "pl-products",
+      "blocks": {
+        "lantern_zm98Ea": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "The Elk of Trail Ridge Road",
+            "place": "Rocky Mountain National Park",
+            "description": "Elk grazing the tundra above treeline, printed across all four panels.",
+            "white_only": false
+          }
+        },
+        "lantern_QapPJA": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "The Stanley Hotel",
+            "place": "Estes Park",
+            "description": "The hotel's white facade and the Front Range behind it.",
+            "white_only": false
+          }
+        },
+        "lantern_yGWbRY": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "Bear Lake",
+            "place": "Rocky Mountain National Park",
+            "description": "Still water and Hallett Peak, one of the park's most visited views.",
+            "white_only": false
+          }
+        },
+        "lantern_8FETAb": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "Alberta Falls",
+            "place": "Rocky Mountain National Park",
+            "description": "Glacier Creek dropping through granite on the Glacier Gorge trail.",
+            "white_only": false
+          }
+        },
+        "lantern_JYNifN": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "Moraine Park Valley",
+            "place": "Rocky Mountain National Park",
+            "description": "The valley floor at golden hour, looking west toward the divide.",
+            "white_only": false
+          }
+        },
+        "lantern_DUekWE": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "Rocky Mountain National Park",
+            "place": "Colorado",
+            "description": "A four-panel park panorama, the anchor design of the collection.",
+            "white_only": false
+          }
+        },
+        "lantern_gR8grG": {
+          "type": "lantern",
+          "settings": {
+            "product": "",
+            "title": "Boulder Flatirons Panorama",
+            "place": "Boulder",
+            "description": "The Flatirons wrapped across the full width of the lantern.",
+            "white_only": true
+          }
+        }
+      },
+      "block_order": [
+        "lantern_zm98Ea",
+        "lantern_QapPJA",
+        "lantern_yGWbRY",
+        "lantern_8FETAb",
+        "lantern_JYNifN",
+        "lantern_DUekWE",
+        "lantern_gR8grG"
+      ],
+      "name": "PL Product grid",
+      "settings": {
+        "columns": 3,
+        "gate_label": "Wholesale pricing",
+        "white_label": "White",
+        "black_label": "Black",
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "White only",
+        "text_2": "Frame colour",
+        "text_3": "Log in for pricing",
+        "font": "assistant_n4"
+      }
     }
   },
   "order": [
     "pl_hero_BtjHcX",
-    "1776640043e884c01e"
+    "1776640043e884c01e",
+    "pl_login_fWehMK",
+    "pl_steps_3aTgd6",
+    "pl_registration_aJaMJ7",
+    "pl_about_3Ajr46",
+    "pl_products_DhRNWV"
   ]
 }
