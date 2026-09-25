@@ -309,7 +309,10 @@
       {%- render 'cart-drawer' -%}
     {%- endif -%}
 
-    {% sections 'header-group' %}
+    {%- comment -%} The BoCo page (page.boco) renders its own PL Wholesale header section instead. {%- endcomment -%}
+    {%- unless template.name == 'page' and template.suffix == 'boco' -%}
+      {% sections 'header-group' %}
+    {%- endunless -%}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}

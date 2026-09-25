@@ -17,7 +17,7 @@ The supplied HTML is split into nine independent sections. Every section contain
 ## Installation
 
 1. Upload the nine section files and `templates/page.boco.json` to the theme.
-2. The homepage keeps the main store design. In Shopify admin, create a page (for example **BoCo**) and choose the **boco** template. It uses the main theme header and footer. (`page.postcard-wholesale` with its own layout is still available as an alternative.)
+2. The homepage keeps the main store design. In Shopify admin, create a page (for example **BoCo**) and choose the **boco** template. On that page `layout/theme.liquid` hides the main header group and the page shows its own PL Wholesale header; the main footer stays. (`page.postcard-wholesale` with its own layout is still available as an alternative.)
 3. Open that page in the Theme Editor. Each section appears separately with a **PL** prefix and can be edited or reordered. The alternate layout supplies only the reference page's header and footer, avoiding duplicate theme navigation.
 4. Select the hero image and each lantern image. The source references seven local JPEGs which were not included with the HTML. Until images are selected, Shopify placeholders appear. Product blocks can optionally use a selected Shopify product's featured image.
 5. Review login/application URLs, replace the footer contact placeholder and adjust the collection's design-count text if cards are added or removed. Defaults retain the client's `mybocohome.com` wholesale URLs.

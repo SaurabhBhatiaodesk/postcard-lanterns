@@ -1,14 +1,22 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
+    "pl_header_boco": {
+      "type": "pl-header",
+      "name": "PL Wholesale header",
+      "settings": {
+        "link_1": "#collection",
+        "link_2": "#how",
+        "link_3": "https://mybocohome.com/pages/ws-account-login",
+        "link_4": "#register",
+        "text_1": "Postcard Lanterns",
+        "text_2": "Wholesale",
+        "text_3": "Collection",
+        "text_4": "How it works",
+        "text_5": "Log in",
+        "text_6": "Apply for wholesale",
+        "font": "assistant_n4"
+      }
+    },
     "pl_hero_BtjHcX": {
       "type": "pl-hero",
       "name": "PL Wholesale hero",
@@ -163,6 +171,7 @@
     }
   },
   "order": [
+    "pl_header_boco",
     "pl_hero_BtjHcX",
     "1776640043e884c01e",
     "pl_about_3Ajr46",
