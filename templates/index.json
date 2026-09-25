@@ -1,1 +1,999 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"","heading_size":"h0"}},"button":{"type":"buttons","settings":{"button_label_1":"","button_link_1":"shopify:\/\/collections\/artisan-himalayan-salt-lamp-designs","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image":"shopify:\/\/shop_images\/Himalayan_Salt_Therapy_Lamps_hires_15_x_7_in_5.png","image_overlay_opacity":0,"image_height":"adapt","image_behavior":"none","desktop_content_position":"bottom-center","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"scheme-3","stack_images_on_mobile":false,"mobile_content_alignment":"center","show_text_below":false}},"featured_product_WQQV8F":{"type":"featured-product","blocks":{"text_i6nVjr":{"type":"text","settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"title_nL76cF":{"type":"title","settings":{"heading_size":"h1"}},"price_xpdiak":{"type":"price","settings":{}},"variant_picker_yzC69J":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector_6ERAxC":{"type":"quantity_selector","settings":{}},"buy_buttons_Vkix8Y":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"share_d9egTw":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["text_i6nVjr","title_nL76cF","price_xpdiak","variant_picker_yzC69J","quantity_selector_6ERAxC","buy_buttons_Vkix8Y","share_d9egTw"],"name":"t:sections.featured-product.presets.name","settings":{"product":"forest-critters-himalayan-salt-therapy-lamp-with-3-massage-balls-copy","color_scheme":"","secondary_background":false,"media_size":"small","constrain_to_viewport":true,"media_fit":"contain","media_position":"left","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":36}},"image_with_text_m3EpKi":{"type":"image-with-text","blocks":{"heading_YrpNBV":{"type":"heading","settings":{"heading":"Introducing the Aspen Glow","heading_size":"h1"}},"text_ej9bBN":{"type":"text","settings":{"text":"<p>Get  the beautiful new Burnished Bloom Himalayand Salt Therapy Lamp, A Roller Ball and 15w replacement bulb for just $65 (regular price $75) through Mother's Day! <\/p>","text_style":"body"}},"button_fcQifw":{"type":"button","settings":{"button_label":"Shop Now","button_link":"shopify:\/\/products\/himalayan-salt-therapy-lamp-and-roller-ball-set-iron-diamond-copy","button_style_secondary":false}}},"block_order":["heading_YrpNBV","text_ej9bBN","button_fcQifw"],"disabled":true,"name":"t:sections.image-with-text.presets.name","settings":{"image":"shopify:\/\/shop_images\/6_2599b03a-7db4-404c-bfbd-8822d40d1b93.png","height":"adapt","desktop_image_width":"small","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"","color_scheme":"","padding_top":36,"padding_bottom":36}},"featured_collection_z7nhMJ":{"type":"featured-collection","name":"t:sections.featured-collection.presets.name","settings":{"collection":"introducing-new-our-four-ball-salt-lamps","products_to_show":5,"title":"Four Ball Salt Lamps are Back!","heading_size":"h1","description":"<p>Beautiful designs exclusive to The Salt Lamp Ladies<\/p>","show_description":false,"description_style":"body","columns_desktop":5,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_7cgF96":{"type":"featured-collection","disabled":true,"name":"t:sections.featured-collection.presets.name","settings":{"collection":"gothic-market-special-edition-lanterns","products_to_show":6,"title":"Holistic Market Special Edition Lanterns","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":3,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_KPDDKh":{"type":"featured-collection","name":"t:sections.featured-collection.presets.name","settings":{"collection":"handcrafted-himalayan-salt-therapy-lamps","products_to_show":6,"title":"*Limited Edition* Handcrafted Himalayan Salt Therapy lamps (only 10 of each design created)","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":3,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"portrait","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_X8JaaW":{"type":"featured-collection","name":"t:sections.featured-collection.presets.name","settings":{"collection":"gift-set-himalayan-salt-therapy-lamp-starter-set","products_to_show":4,"title":"New Salt Therapy Lamp Starter Packages","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":2,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"image_with_text_PdYCgF":{"type":"image-with-text","blocks":{"heading_b6xJin":{"type":"heading","settings":{"heading":"Himalayan Salt Therapy Starter Lamp Gift Set!","heading_size":"h2"}},"text_dxedW3":{"type":"text","settings":{"text":"<p>Includes:<\/p><p> One Himalayan Salt Therapy “Starter” Lamp topped with a Himalayan Salt massage ball<\/p><p>One Himalayan Salt Roller Ball<\/p><p>Three replacement light bulbs (15w)<\/p><p>Gift Wrap (gift bag and tissue paper)<\/p><p><strong>Free Shipping!<\/strong><\/p><p><\/p><p><\/p>","text_style":"body"}},"button_4EDAGM":{"type":"button","settings":{"button_label":"Check them out!","button_link":"shopify:\/\/collections\/gift-set-himalayan-salt-therapy-lamp-starter-set","button_style_secondary":false}}},"block_order":["heading_b6xJin","text_dxedW3","button_4EDAGM"],"disabled":true,"name":"t:sections.image-with-text.presets.name","settings":{"image":"shopify:\/\/shop_images\/Last_chance_2.png","height":"adapt","desktop_image_width":"large","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"","color_scheme":"","padding_top":36,"padding_bottom":36}},"image_banner_VU8Bfg":{"type":"image-banner","blocks":{"heading_cezafW":{"type":"heading","settings":{"heading":"","heading_size":"h1"}},"text_R8cwBR":{"type":"text","settings":{"text":"","text_style":"body"}},"buttons_YMLRdQ":{"type":"buttons","settings":{"button_label_1":"","button_link_1":"shopify:\/\/collections\/gift-set-himalayan-salt-therapy-lamp-starter-set","button_style_secondary_1":false,"button_label_2":"Shop Now","button_link_2":"shopify:\/\/collections\/gift-set-himalayan-salt-therapy-lamp-starter-set","button_style_secondary_2":false}}},"block_order":["heading_cezafW","text_R8cwBR","buttons_YMLRdQ"],"disabled":true,"name":"t:sections.image-banner.presets.name","settings":{"image":"shopify:\/\/shop_images\/Last_chance_10_x_5_in_2.png","image_overlay_opacity":0,"image_height":"adapt","image_behavior":"none","desktop_content_position":"bottom-center","desktop_content_alignment":"right","show_text_box":false,"color_scheme":"scheme-4","stack_images_on_mobile":false,"mobile_content_alignment":"center","show_text_below":true}},"featured_collection_DFgyzt":{"type":"featured-collection","settings":{"collection":"himalayan-salt-therapy-lamps","products_to_show":9,"title":"Salt Therapy Lamps","heading_size":"h1","description":"<p>Check out our wide variety of salt lamps that come with 1, 3, 4, and 5 massage balls<\/p>","show_description":false,"description_style":"body","columns_desktop":3,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"portrait","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_product_6rf9ma":{"type":"featured-product","blocks":{"text_EG3RqM":{"type":"text","disabled":true,"settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"title_nDnFn8":{"type":"title","settings":{"heading_size":"h1"}},"price_iNTm3y":{"type":"price","settings":{}},"variant_picker_q37ABr":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector_4kyHJV":{"type":"quantity_selector","settings":{}},"buy_buttons_kGbW3t":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"share_Qj3eRA":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["text_EG3RqM","title_nDnFn8","price_iNTm3y","variant_picker_q37ABr","quantity_selector_4kyHJV","buy_buttons_kGbW3t","share_Qj3eRA"],"disabled":true,"name":"t:sections.featured-product.presets.name","settings":{"product":"custom-himalayan-salt-therapy-lantern","color_scheme":"","secondary_background":false,"media_size":"medium","constrain_to_viewport":true,"media_fit":"contain","media_position":"right","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":36}},"featured_collection_qB7MkL":{"type":"featured-collection","disabled":true,"name":"t:sections.featured-collection.presets.name","settings":{"collection":"himalayan-salt-therapy-lamps","products_to_show":8,"title":"Himalayan Salt Therapy Lamps","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection":{"type":"featured-collection","disabled":true,"settings":{"collection":"featured-products","products_to_show":6,"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"scheme-1","image_ratio":"portrait","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"standard","columns_mobile":"2","swipe_on_mobile":false,"padding_top":20,"padding_bottom":36}},"image_banner_prPWxy":{"type":"image-banner","blocks":{"heading_waCyY8":{"type":"heading","settings":{"heading":"","heading_size":"h1"}},"text_VajKz6":{"type":"text","settings":{"text":"","text_style":"body"}},"buttons_xrNMXr":{"type":"buttons","settings":{"button_label_1":"","button_link_1":"","button_style_secondary_1":false,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading_waCyY8","text_VajKz6","buttons_xrNMXr"],"name":"t:sections.image-banner.presets.name","settings":{"image":"shopify:\/\/shop_images\/Himalayan_Salt_Therapy_Lamps_banner_36_x_24_in_14.png","image_overlay_opacity":0,"image_height":"adapt","image_behavior":"none","desktop_content_position":"middle-center","desktop_content_alignment":"center","show_text_box":false,"color_scheme":"","stack_images_on_mobile":true,"mobile_content_alignment":"center","show_text_below":true}},"featured_product_dTnKji":{"type":"featured-product","blocks":{"title_9gTFqj":{"type":"title","settings":{"heading_size":"h1"}},"text_wNmK4Y":{"type":"text","settings":{"text":"Each Salt Therapy Lantern comes with two massage therapy salt balls, three backlit images installed in the lantern body, a 25w incandescent light bulb, and white Himalayan salt rocks. More than 20 designs available!","text_style":"body"}},"price_m36JtC":{"type":"price","settings":{}},"variant_picker_qV7yJF":{"type":"variant_picker","settings":{"picker_type":"dropdown","swatch_shape":"circle"}},"quantity_selector_Fg9mDV":{"type":"quantity_selector","settings":{}},"buy_buttons_dyT7Yc":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"share_fCaQ9J":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["title_9gTFqj","text_wNmK4Y","price_m36JtC","variant_picker_qV7yJF","quantity_selector_Fg9mDV","buy_buttons_dyT7Yc","share_fCaQ9J"],"disabled":true,"name":"t:sections.featured-product.presets.name","settings":{"product":"himalayan-salt-therapy-lantern","color_scheme":"scheme-1","secondary_background":false,"media_size":"medium","constrain_to_viewport":true,"media_fit":"contain","media_position":"left","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":36,"padding_bottom":36}},"featured_collection_D4DTYh":{"type":"featured-collection","disabled":true,"name":"t:sections.featured-collection.presets.name","settings":{"collection":"himalayan-salt-therapy-lanterns","products_to_show":6,"title":"Shop Himalayan Salt Lanterns","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":3,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"adapt","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"featured_collection_D4jRmL":{"type":"featured-collection","name":"t:sections.featured-collection.presets.name","settings":{"collection":"accessories","products_to_show":4,"title":"Salt Lamp and Lantern Accessories","heading_size":"h1","description":"","show_description":false,"description_style":"body","columns_desktop":4,"enable_desktop_slider":false,"full_width":false,"show_view_all":true,"view_all_style":"solid","color_scheme":"","image_ratio":"square","image_shape":"default","show_secondary_image":false,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}},"1758691839bfb8fdaa":{"type":"apps","blocks":{"forms_inline_GK6YgM":{"type":"shopify:\/\/apps\/forms\/blocks\/inline\/8744a304-fcb1-4347-b211-bb6b4759a76a","disabled":true,"settings":{"form_id":"646008","text_color":"#202020","button_background_color":"#202020","button_label_color":"#ffffff","links_color":"#1878b9","errors_color":"#e02229","text_alignment":"center","form_alignment":"center","padding_top":0,"padding_bottom":24,"padding_right":0,"padding_left":0}}},"block_order":["forms_inline_GK6YgM"],"settings":{"include_margins":true}},"newsletter_WHMjDV":{"type":"newsletter","blocks":{"heading_kbB8Qn":{"type":"heading","settings":{"heading":"Sign up to get exclusive online deals and sale updates!","heading_size":"h1"}},"paragraph_yf348W":{"type":"paragraph","settings":{"text":"<p>We don't send emails often, but when we do, they're full of the BEST deals<\/p>"}},"email_form_pWHpkB":{"type":"email_form","settings":{}}},"block_order":["heading_kbB8Qn","paragraph_yf348W","email_form_pWHpkB"],"name":"t:sections.newsletter.presets.name","settings":{"color_scheme":"","full_width":true,"padding_top":40,"padding_bottom":52}},"image_with_text_94NVhc":{"type":"image-with-text","blocks":{"heading_MnNcmx":{"type":"heading","settings":{"heading":"A note from the Salt Lamp Ladies","heading_size":"h2"}},"text_q94F8A":{"type":"text","settings":{"text":"<p>A huge Thank You from LindaMae and Erika, the Mother\/Daughter team behind HoldHotBalls (Bo•Co Home) We wouldn’t be here without you and are so grateful for you all! <\/p>","text_style":"body"}},"button_Q6gJeK":{"type":"button","settings":{"button_label":"Read Our Story","button_link":"shopify:\/\/pages\/my-story","button_style_secondary":false}}},"block_order":["heading_MnNcmx","text_q94F8A","button_Q6gJeK"],"name":"t:sections.image-with-text.presets.name","settings":{"image":"shopify:\/\/shop_images\/SaltLampLadiesHeadshot.png","height":"adapt","desktop_image_width":"small","layout":"image_first","image_behavior":"none","content_layout":"no-overlap","desktop_content_position":"top","desktop_content_alignment":"left","mobile_content_alignment":"left","section_color_scheme":"","color_scheme":"","padding_top":36,"padding_bottom":36}},"featured_product_kmFhqx":{"type":"featured-product","blocks":{"text_xY43UK":{"type":"text","disabled":true,"settings":{"text":"{{ section.settings.product.vendor }}","text_style":"uppercase"}},"title_biCYXg":{"type":"title","settings":{"heading_size":"h1"}},"price_iCHDYY":{"type":"price","settings":{}},"variant_picker_6CrXAK":{"type":"variant_picker","settings":{"picker_type":"dropdown","swatch_shape":"circle"}},"quantity_selector_Lcbh7x":{"type":"quantity_selector","settings":{}},"buy_buttons_9VYwjX":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"share_hamJVP":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["text_xY43UK","title_biCYXg","price_iCHDYY","variant_picker_6CrXAK","quantity_selector_Lcbh7x","buy_buttons_9VYwjX","share_hamJVP"],"name":"t:sections.featured-product.presets.name","settings":{"product":"bo-co-home-e-gift-card","color_scheme":"","secondary_background":false,"media_size":"large","constrain_to_viewport":true,"media_fit":"cover","media_position":"right","image_zoom":"lightbox","hide_variants":false,"enable_video_looping":false,"padding_top":28,"padding_bottom":0}},"1762531032963a8c21":{"type":"apps","blocks":{"square_instagram_feed_insta_feed_Xw3Yk8":{"type":"shopify:\/\/apps\/square-instagram-feed\/blocks\/insta-feed\/8c9f3786-8bb5-488d-a397-b1285ed978df","settings":{"hide_mock_data":false}}},"block_order":["square_instagram_feed_insta_feed_Xw3Yk8"],"settings":{"include_margins":true}},"1776640043e884c01e":{"type":"apps","blocks":{"loox_reviews_loox_agg_section_XnHzPC":{"type":"shopify:\/\/apps\/loox-reviews\/blocks\/loox-agg-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e","settings":{"reviews_to_display":"product_store_reviews","default_tab":"automatic","only_photos":false,"hide_thumbnails":false,"product_handle":"","aggregated":true,"data-limit":20,"maxwidth":1080,"is_sample":true}},"loox_reviews_loox_testimonial_carousel_section_fcWRFh":{"type":"shopify:\/\/apps\/loox-reviews\/blocks\/loox-testimonial-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e","disabled":true,"settings":{"maxWidth":1120,"desktopFontSize":32,"mobileFontSize":20,"maxNumberOfCharacters":100,"quoteMarkIcon":"style-1","reviewerNameColor":"#000000","textColor":"#000000","starsColor":"","quotesIconColor":"#eaeaea","arrows_iconColor":"#000000","arrows_hideOnMobile":true,"pagination_active":true,"pagination_selectedDotColor":"#000000","pagination_dotColor":"#000000","autoplay_active":false,"autoplay_duration":2,"productIds":""}}},"block_order":["loox_reviews_loox_agg_section_XnHzPC","loox_reviews_loox_testimonial_carousel_section_fcWRFh"],"settings":{"include_margins":true}}},"order":["image_banner","featured_product_WQQV8F","image_with_text_m3EpKi","featured_collection_z7nhMJ","featured_collection_7cgF96","featured_collection_KPDDKh","featured_collection_X8JaaW","image_with_text_PdYCgF","image_banner_VU8Bfg","featured_collection_DFgyzt","featured_product_6rf9ma","featured_collection_qB7MkL","featured_collection","image_banner_prPWxy","featured_product_dTnKji","featured_collection_D4DTYh","featured_collection_D4jRmL","1758691839bfb8fdaa","newsletter_WHMjDV","image_with_text_94NVhc","featured_product_kmFhqx","1762531032963a8c21","1776640043e884c01e"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h0"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "shopify://collections/artisan-himalayan-salt-lamp-designs",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Himalayan_Salt_Therapy_Lamps_hires_15_x_7_in_5.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": false
+      }
+    },
+    "featured_product_WQQV8F": {
+      "type": "featured-product",
+      "blocks": {
+        "text_i6nVjr": {
+          "type": "text",
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_nL76cF": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_xpdiak": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_yzC69J": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_6ERAxC": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_Vkix8Y": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_d9egTw": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_i6nVjr",
+        "title_nL76cF",
+        "price_xpdiak",
+        "variant_picker_yzC69J",
+        "quantity_selector_6ERAxC",
+        "buy_buttons_Vkix8Y",
+        "share_d9egTw"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "forest-critters-himalayan-salt-therapy-lamp-with-3-massage-balls-copy",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_m3EpKi": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_YrpNBV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Introducing the Aspen Glow",
+            "heading_size": "h1"
+          }
+        },
+        "text_ej9bBN": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get  the beautiful new Burnished Bloom Himalayand Salt Therapy Lamp, A Roller Ball and 15w replacement bulb for just $65 (regular price $75) through Mother's Day! </p>",
+            "text_style": "body"
+          }
+        },
+        "button_fcQifw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "shopify://products/himalayan-salt-therapy-lamp-and-roller-ball-set-iron-diamond-copy",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_YrpNBV",
+        "text_ej9bBN",
+        "button_fcQifw"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/6_2599b03a-7db4-404c-bfbd-8822d40d1b93.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_z7nhMJ": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "introducing-new-our-four-ball-salt-lamps",
+        "products_to_show": 5,
+        "title": "Four Ball Salt Lamps are Back!",
+        "heading_size": "h1",
+        "description": "<p>Beautiful designs exclusive to The Salt Lamp Ladies</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 5,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_7cgF96": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "gothic-market-special-edition-lanterns",
+        "products_to_show": 6,
+        "title": "Holistic Market Special Edition Lanterns",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_KPDDKh": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "handcrafted-himalayan-salt-therapy-lamps",
+        "products_to_show": 6,
+        "title": "*Limited Edition* Handcrafted Himalayan Salt Therapy lamps (only 10 of each design created)",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_X8JaaW": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "gift-set-himalayan-salt-therapy-lamp-starter-set",
+        "products_to_show": 4,
+        "title": "New Salt Therapy Lamp Starter Packages",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 2,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_PdYCgF": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_b6xJin": {
+          "type": "heading",
+          "settings": {
+            "heading": "Himalayan Salt Therapy Starter Lamp Gift Set!",
+            "heading_size": "h2"
+          }
+        },
+        "text_dxedW3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Includes:</p><p> One Himalayan Salt Therapy “Starter” Lamp topped with a Himalayan Salt massage ball</p><p>One Himalayan Salt Roller Ball</p><p>Three replacement light bulbs (15w)</p><p>Gift Wrap (gift bag and tissue paper)</p><p><strong>Free Shipping!</strong></p><p></p><p></p>",
+            "text_style": "body"
+          }
+        },
+        "button_4EDAGM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Check them out!",
+            "button_link": "shopify://collections/gift-set-himalayan-salt-therapy-lamp-starter-set",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_b6xJin",
+        "text_dxedW3",
+        "button_4EDAGM"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Last_chance_2.png",
+        "height": "adapt",
+        "desktop_image_width": "large",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_VU8Bfg": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_cezafW": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_R8cwBR": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_YMLRdQ": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "shopify://collections/gift-set-himalayan-salt-therapy-lamp-starter-set",
+            "button_style_secondary_1": false,
+            "button_label_2": "Shop Now",
+            "button_link_2": "shopify://collections/gift-set-himalayan-salt-therapy-lamp-starter-set",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cezafW",
+        "text_R8cwBR",
+        "buttons_YMLRdQ"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Last_chance_10_x_5_in_2.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "bottom-center",
+        "desktop_content_alignment": "right",
+        "show_text_box": false,
+        "color_scheme": "scheme-4",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "featured_collection_DFgyzt": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "himalayan-salt-therapy-lamps",
+        "products_to_show": 9,
+        "title": "Salt Therapy Lamps",
+        "heading_size": "h1",
+        "description": "<p>Check out our wide variety of salt lamps that come with 1, 3, 4, and 5 massage balls</p>",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_6rf9ma": {
+      "type": "featured-product",
+      "blocks": {
+        "text_EG3RqM": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_nDnFn8": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_iNTm3y": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_q37ABr": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_4kyHJV": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_kGbW3t": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_Qj3eRA": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_EG3RqM",
+        "title_nDnFn8",
+        "price_iNTm3y",
+        "variant_picker_q37ABr",
+        "quantity_selector_4kyHJV",
+        "buy_buttons_kGbW3t",
+        "share_Qj3eRA"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "custom-himalayan-salt-therapy-lantern",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_qB7MkL": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "himalayan-salt-therapy-lamps",
+        "products_to_show": 8,
+        "title": "Himalayan Salt Therapy Lamps",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "collection": "featured-products",
+        "products_to_show": 6,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
+    },
+    "image_banner_prPWxy": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_waCyY8": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "heading_size": "h1"
+          }
+        },
+        "text_VajKz6": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        },
+        "buttons_xrNMXr": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_waCyY8",
+        "text_VajKz6",
+        "buttons_xrNMXr"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Himalayan_Salt_Therapy_Lamps_banner_36_x_24_in_14.png",
+        "image_overlay_opacity": 0,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "",
+        "stack_images_on_mobile": true,
+        "mobile_content_alignment": "center",
+        "show_text_below": true
+      }
+    },
+    "featured_product_dTnKji": {
+      "type": "featured-product",
+      "blocks": {
+        "title_9gTFqj": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "text_wNmK4Y": {
+          "type": "text",
+          "settings": {
+            "text": "Each Salt Therapy Lantern comes with two massage therapy salt balls, three backlit images installed in the lantern body, a 25w incandescent light bulb, and white Himalayan salt rocks. More than 20 designs available!",
+            "text_style": "body"
+          }
+        },
+        "price_m36JtC": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_qV7yJF": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_Fg9mDV": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_dyT7Yc": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_fCaQ9J": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "title_9gTFqj",
+        "text_wNmK4Y",
+        "price_m36JtC",
+        "variant_picker_qV7yJF",
+        "quantity_selector_Fg9mDV",
+        "buy_buttons_dyT7Yc",
+        "share_fCaQ9J"
+      ],
+      "disabled": true,
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "himalayan-salt-therapy-lantern",
+        "color_scheme": "scheme-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_D4DTYh": {
+      "type": "featured-collection",
+      "disabled": true,
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "himalayan-salt-therapy-lanterns",
+        "products_to_show": 6,
+        "title": "Shop Himalayan Salt Lanterns",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 3,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_D4jRmL": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "collection": "accessories",
+        "products_to_show": 4,
+        "title": "Salt Lamp and Lantern Accessories",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "1758691839bfb8fdaa": {
+      "type": "apps",
+      "blocks": {
+        "forms_inline_GK6YgM": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
+          "disabled": true,
+          "settings": {
+            "form_id": "646008",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#ffffff",
+            "links_color": "#1878b9",
+            "errors_color": "#e02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 24,
+            "padding_right": 0,
+            "padding_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "forms_inline_GK6YgM"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "newsletter_WHMjDV": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_kbB8Qn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sign up to get exclusive online deals and sale updates!",
+            "heading_size": "h1"
+          }
+        },
+        "paragraph_yf348W": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>We don't send emails often, but when we do, they're full of the BEST deals</p>"
+          }
+        },
+        "email_form_pWHpkB": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_kbB8Qn",
+        "paragraph_yf348W",
+        "email_form_pWHpkB"
+      ],
+      "name": "t:sections.newsletter.presets.name",
+      "settings": {
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "image_with_text_94NVhc": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_MnNcmx": {
+          "type": "heading",
+          "settings": {
+            "heading": "A note from the Salt Lamp Ladies",
+            "heading_size": "h2"
+          }
+        },
+        "text_q94F8A": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A huge Thank You from LindaMae and Erika, the Mother/Daughter team behind HoldHotBalls (Bo•Co Home) We wouldn’t be here without you and are so grateful for you all! </p>",
+            "text_style": "body"
+          }
+        },
+        "button_Q6gJeK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read Our Story",
+            "button_link": "shopify://pages/my-story",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_MnNcmx",
+        "text_q94F8A",
+        "button_Q6gJeK"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/SaltLampLadiesHeadshot.png",
+        "height": "adapt",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_product_kmFhqx": {
+      "type": "featured-product",
+      "blocks": {
+        "text_xY43UK": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "{{ section.settings.product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title_biCYXg": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price_iCHDYY": {
+          "type": "price",
+          "settings": {}
+        },
+        "variant_picker_6CrXAK": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector_Lcbh7x": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons_9VYwjX": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "share_hamJVP": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "text_xY43UK",
+        "title_biCYXg",
+        "price_iCHDYY",
+        "variant_picker_6CrXAK",
+        "quantity_selector_Lcbh7x",
+        "buy_buttons_9VYwjX",
+        "share_hamJVP"
+      ],
+      "name": "t:sections.featured-product.presets.name",
+      "settings": {
+        "product": "bo-co-home-e-gift-card",
+        "color_scheme": "",
+        "secondary_background": false,
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "cover",
+        "media_position": "right",
+        "image_zoom": "lightbox",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 28,
+        "padding_bottom": 0
+      }
+    },
+    "1762531032963a8c21": {
+      "type": "apps",
+      "blocks": {
+        "square_instagram_feed_insta_feed_Xw3Yk8": {
+          "type": "shopify://apps/square-instagram-feed/blocks/insta-feed/8c9f3786-8bb5-488d-a397-b1285ed978df",
+          "settings": {
+            "hide_mock_data": false
+          }
+        }
+      },
+      "block_order": [
+        "square_instagram_feed_insta_feed_Xw3Yk8"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1776640043e884c01e": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_XnHzPC": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "product_store_reviews",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        },
+        "loox_reviews_loox_testimonial_carousel_section_fcWRFh": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-testimonial-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1120,
+            "desktopFontSize": 32,
+            "mobileFontSize": 20,
+            "maxNumberOfCharacters": 100,
+            "quoteMarkIcon": "style-1",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "starsColor": "",
+            "quotesIconColor": "#eaeaea",
+            "arrows_iconColor": "#000000",
+            "arrows_hideOnMobile": true,
+            "pagination_active": true,
+            "pagination_selectedDotColor": "#000000",
+            "pagination_dotColor": "#000000",
+            "autoplay_active": false,
+            "autoplay_duration": 2,
+            "productIds": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_XnHzPC",
+        "loox_reviews_loox_testimonial_carousel_section_fcWRFh"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_product_WQQV8F",
+    "image_with_text_m3EpKi",
+    "featured_collection_z7nhMJ",
+    "featured_collection_7cgF96",
+    "featured_collection_KPDDKh",
+    "featured_collection_X8JaaW",
+    "image_with_text_PdYCgF",
+    "image_banner_VU8Bfg",
+    "featured_collection_DFgyzt",
+    "featured_product_6rf9ma",
+    "featured_collection_qB7MkL",
+    "featured_collection",
+    "image_banner_prPWxy",
+    "featured_product_dTnKji",
+    "featured_collection_D4DTYh",
+    "featured_collection_D4jRmL",
+    "1758691839bfb8fdaa",
+    "newsletter_WHMjDV",
+    "image_with_text_94NVhc",
+    "featured_product_kmFhqx",
+    "1762531032963a8c21",
+    "1776640043e884c01e"
+  ]
+}
