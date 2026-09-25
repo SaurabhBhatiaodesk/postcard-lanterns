@@ -13,7 +13,7 @@
       "type": "pl-hero",
       "name": "PL Wholesale hero",
       "settings": {
-        "image": "shopify://shop_images/Untitled_design_18.png",
+        "image": "shopify://shop_images/Elk1WhiteRmnpLantern-1_0eb206cb-e88b-43f0-8b75-05133b61f472.jpg",
         "link_1": "#register",
         "link_2": "#collection",
         "text_1": "Scenic Colorado Collection",
@@ -89,7 +89,13 @@
       "type": "pl-products",
       "name": "PL Product grid",
       "settings": {
-        "collection": "introducing-new-our-four-ball-salt-lamps",
+        "show_heading": true,
+        "eyebrow": "The collection",
+        "title": "Scenic Colorado Postcard Lanterns",
+        "availability_text": "Available in black and white",
+        "show_count": true,
+        "count_label": "designs",
+        "collection": "scenic-colorado-postcard-lanterns",
         "columns": 3,
         "padding_top": 40,
         "padding_bottom": 96,
