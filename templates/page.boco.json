@@ -1,0 +1,174 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "pl_hero_BtjHcX": {
+      "type": "pl-hero",
+      "name": "PL Wholesale hero",
+      "settings": {
+        "image": "shopify://shop_images/Elk1WhiteRmnpLantern-1_0eb206cb-e88b-43f0-8b75-05133b61f472.jpg",
+        "link_1": "#register",
+        "link_2": "#collection",
+        "text_1": "Scenic Colorado Collection",
+        "text_2": "Colorado postcards,",
+        "text_3": "lit from within.",
+        "text_4": "A wholesale line of decorative LED lanterns printed with Colorado scenes, made for souvenir counters, park gift shops, hotels and independent retailers.",
+        "text_5": "Register for pricing",
+        "text_6": "Browse the collection",
+        "text_7": "Trade pricing and ordering unlock once your account is approved.",
+        "font": "assistant_n4"
+      }
+    },
+    "1776640043e884c01e": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_agg_section_XnHzPC": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-agg-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "product_store_reviews",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "hide_thumbnails": false,
+            "product_handle": "",
+            "aggregated": true,
+            "data-limit": 20,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        },
+        "loox_reviews_loox_testimonial_carousel_section_fcWRFh": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-testimonial-carousel-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "maxWidth": 1120,
+            "desktopFontSize": 32,
+            "mobileFontSize": 20,
+            "maxNumberOfCharacters": 100,
+            "quoteMarkIcon": "style-1",
+            "reviewerNameColor": "#000000",
+            "textColor": "#000000",
+            "starsColor": "",
+            "quotesIconColor": "#eaeaea",
+            "arrows_iconColor": "#000000",
+            "arrows_hideOnMobile": true,
+            "pagination_active": true,
+            "pagination_selectedDotColor": "#000000",
+            "pagination_dotColor": "#000000",
+            "autoplay_active": false,
+            "autoplay_duration": 2,
+            "productIds": ""
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_agg_section_XnHzPC",
+        "loox_reviews_loox_testimonial_carousel_section_fcWRFh"
+      ],
+      "disabled": true,
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "pl_about_3Ajr46": {
+      "type": "pl-about",
+      "name": "PL About",
+      "settings": {
+        "text_1": "About us",
+        "text_2": "Bo•Co Home makes decorative lanterns in Colorado, printing scenic photography onto four-panel LED lanterns that light a room the way a postcard lights a memory.",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_products_DhRNWV": {
+      "type": "pl-products",
+      "name": "PL Product grid",
+      "settings": {
+        "show_heading": true,
+        "eyebrow": "The collection",
+        "title": "Scenic Colorado Postcard Lanterns",
+        "availability_text": "Available in black and white",
+        "show_count": true,
+        "count_label": "designs",
+        "collection": "scenic-colorado-postcard-lanterns",
+        "columns": 3,
+        "padding_top": 40,
+        "padding_bottom": 96,
+        "padding_top_mobile": 32,
+        "padding_bottom_mobile": 64,
+        "background_color": "#f7f3ea",
+        "heading_color": "#211d1a",
+        "text_color": "#554e45",
+        "muted_color": "#6b6153",
+        "link_color": "#a03f32",
+        "link_hover_color": "#7e2f25",
+        "image_background": "#efe8da",
+        "select_background": "#fdfaf4",
+        "border_color": "#e2d9c8",
+        "gate_label": "Wholesale pricing",
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_3": "Log in for pricing",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_steps_3aTgd6": {
+      "type": "pl-steps",
+      "name": "PL Wholesale steps",
+      "settings": {
+        "text_1": "How wholesale works",
+        "text_2": "Three steps to trade pricing",
+        "text_3": "01",
+        "text_4": "Browse the line",
+        "text_5": "Every lantern, photograph and frame option is open to view before you apply.",
+        "text_6": "02",
+        "text_7": "Apply for an account",
+        "text_8": "Send your shop details and resale certificate through the form below.",
+        "text_9": "03",
+        "text_10": "Log in and order",
+        "text_11": "Once approved, wholesale pricing and checkout appear the next time you sign in.",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_login_fWehMK": {
+      "type": "pl-login",
+      "name": "PL Login banner",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Already approved? Sign in to see your pricing.",
+        "text_2": "Log in",
+        "font": "assistant_n4"
+      }
+    },
+    "pl_registration_aJaMJ7": {
+      "type": "pl-registration",
+      "name": "PL Registration",
+      "settings": {
+        "link_1": "https://mybocohome.com/pages/wholesale-registration-form",
+        "link_2": "https://mybocohome.com/pages/ws-account-login",
+        "text_1": "Wholesale registration",
+        "text_2": "Apply for a trade account",
+        "text_3": "Registration takes a couple of minutes. Applications are reviewed by hand, and we will email you as soon as your account is approved, usually within two business days.",
+        "text_4": "Start your application",
+        "text_5": "Already have an account",
+        "text_6": "Minimums and case quantities shown after approval",
+        "text_7": "·",
+        "text_8": "Custom and institutional orders quoted separately",
+        "font": "assistant_n4"
+      }
+    }
+  },
+  "order": [
+    "pl_hero_BtjHcX",
+    "1776640043e884c01e",
+    "pl_about_3Ajr46",
+    "pl_products_DhRNWV",
+    "pl_steps_3aTgd6",
+    "pl_login_fWehMK",
+    "pl_registration_aJaMJ7"
+  ]
+}
