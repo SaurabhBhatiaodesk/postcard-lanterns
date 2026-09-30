@@ -3,16 +3,19 @@
 {% assign medium_font = section.settings.font | font_modify: 'weight', '500' %}{{ medium_font | font_face: font_display: 'swap' }}
 #PL-{{ section.id }} { --pl-font: {{ section.settings.font.family }}, {{ section.settings.font.fallback_families }}; }
 {% endstyle %}
-<div id="PL-{{ section.id }}" class="pl-registration">
-<section id="register" class="pl-registration-1">
+
+<div id="PL-{{ section.id }}" class="pl-registration color-{{ section.settings.color_scheme }} gradient">
+  <section id="register" class="pl-registration-1">
     <div class="pl-registration-2 page-width">
       <div class="pl-registration-3">{{ section.settings.text_1 | escape }}</div>
       <h2 class="pl-registration-4">{{ section.settings.text_2 | escape }}</h2>
       <p class="pl-registration-5">{{ section.settings.text_3 | escape }}</p>
+
       <div class="pl-registration-6">
         <a href="{{ section.settings.link_1 | escape }}" class="pl-registration-7">{{ section.settings.text_4 | escape }}</a>
         <a href="{{ section.settings.link_2 | escape }}" class="pl-registration-8">{{ section.settings.text_5 | escape }}</a>
       </div>
+
       <div class="pl-registration-9">
         <span>{{ section.settings.text_6 | escape }}</span>
         <span class="pl-registration-10">{{ section.settings.text_7 | escape }}</span>
@@ -23,30 +26,188 @@
 </div>
 
 {% stylesheet %}
-.pl-registration {font-family:var(--pl-font);font-size:16px;font-weight:400;line-height:normal;letter-spacing:normal;color:#211d1a;background:#f7f3ea;-webkit-font-smoothing:antialiased} .pl-registration *, .pl-registration *::before, .pl-registration *::after {box-sizing:border-box} .pl-registration a {color:#a03f32;text-decoration:none} .pl-registration a:hover {color:#7e2f25} .pl-registration a:focus-visible, .pl-registration select:focus-visible {outline:2px solid currentColor;outline-offset:4px} .pl-registration select {font-family:inherit} .pl-registration h1,.pl-registration h2,.pl-registration h3 {color:inherit} .pl-registration [id] {scroll-margin-top:110px}
-.pl-registration .pl-registration-1 { padding: 88px 0 }
-.pl-registration .pl-registration-2 { text-align: center }
-.pl-registration .pl-registration-3 { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: #a03f32 }
-.pl-registration .pl-registration-4 { font-family: var(--pl-font); font-weight: 500; font-size: clamp(30px, 4vw, 40px); line-height: 1.15; letter-spacing: -0.01em; margin: 16px 0 0 }
-.pl-registration .pl-registration-5 { font-size: 16px; line-height: 1.7; color: #554e45; margin: 18px auto 0; max-width: 54ch }
-.pl-registration .pl-registration-6 { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 34px }
-.pl-registration .pl-registration-7 { display: inline-block; background: #a03f32; color: #fdfaf4; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 32px; border-radius: 2px }
-.pl-registration .pl-registration-7:hover { background: #7e2f25; color: #fdfaf4 }
-.pl-registration .pl-registration-8 { display: inline-block; border: 1px solid #c8bca6; color: #211d1a; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 16px 32px; border-radius: 2px }
-.pl-registration .pl-registration-8:hover { border-color: #211d1a; color: #211d1a }
-.pl-registration .pl-registration-9 { display: flex; flex-wrap: wrap; gap: 10px 28px; justify-content: center; margin-top: 40px; border-top: 1px solid #e2d9c8; padding-top: 24px; font-size: 13px; color: #554e45 }
-.pl-registration .pl-registration-10 { color: #c8bca6 }
+.pl-registration {
+  font-family: var(--pl-font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+  color: rgb(var(--color-foreground));
+  background: rgb(var(--color-background));
+  -webkit-font-smoothing: antialiased;
+}
 
+.pl-registration *,
+.pl-registration *::before,
+.pl-registration *::after {
+  box-sizing: border-box;
+}
+
+.pl-registration a {
+  color: rgb(var(--color-link));
+  text-decoration: none;
+}
+
+.pl-registration a:hover {
+  color: rgba(var(--color-link), 0.75);
+}
+
+.pl-registration a:focus-visible,
+.pl-registration select:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+.pl-registration select {
+  font-family: inherit;
+}
+
+.pl-registration h1,
+.pl-registration h2,
+.pl-registration h3 {
+  color: inherit;
+}
+
+.pl-registration [id] {
+  scroll-margin-top: 110px;
+}
+
+.pl-registration .pl-registration-1 {
+  padding: 88px 0;
+  background: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+.pl-registration .pl-registration-2 {
+  text-align: center;
+}
+
+.pl-registration .pl-registration-3 {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgb(var(--color-link));
+}
+
+.pl-registration .pl-registration-4 {
+  font-family: var(--pl-font);
+  font-weight: 500;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin: 16px 0 0;
+  color: rgb(var(--color-foreground));
+}
+
+.pl-registration .pl-registration-5 {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(var(--color-foreground), 0.75);
+  margin: 18px auto 0;
+  max-width: 54ch;
+}
+
+.pl-registration .pl-registration-6 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 34px;
+}
+
+.pl-registration .pl-registration-7 {
+  display: inline-block;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-text));
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 2px;
+}
+
+.pl-registration .pl-registration-7:hover {
+  background: rgba(var(--color-button), 0.85);
+  color: rgb(var(--color-button-text));
+}
+
+.pl-registration .pl-registration-8 {
+  display: inline-block;
+  border: 1px solid rgba(var(--color-foreground), 0.3);
+  color: rgb(var(--color-foreground));
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 2px;
+}
+
+.pl-registration .pl-registration-8:hover {
+  border-color: rgb(var(--color-foreground));
+  color: rgb(var(--color-foreground));
+}
+
+.pl-registration .pl-registration-9 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  justify-content: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(var(--color-foreground), 0.15);
+  padding-top: 24px;
+  font-size: 13px;
+  color: rgba(var(--color-foreground), 0.75);
+}
+
+.pl-registration .pl-registration-10 {
+  color: rgba(var(--color-foreground), 0.3);
+}
 
 /* pl-mobile */
-@media(max-width:749px){
-  .pl-registration .pl-registration-1 {padding:56px 0}
-  .pl-registration .pl-registration-4 {font-size:28px;line-height:1.2}
-  .pl-registration .pl-registration-5 {font-size:15px;line-height:1.6}
-  .pl-registration .pl-registration-6 {flex-direction:column;gap:10px;margin-top:26px}
-  .pl-registration .pl-registration-7,.pl-registration .pl-registration-8 {display:flex;align-items:center;justify-content:center;min-height:48px;padding:14px 20px}
-  .pl-registration .pl-registration-9 {flex-direction:column;gap:8px;margin-top:32px;padding-top:20px;line-height:1.5}
-  .pl-registration .pl-registration-10 {display:none}
+@media(max-width: 749px) {
+  .pl-registration .pl-registration-1 {
+    padding: 56px 0;
+  }
+
+  .pl-registration .pl-registration-4 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .pl-registration .pl-registration-5 {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .pl-registration .pl-registration-6 {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 26px;
+  }
+
+  .pl-registration .pl-registration-7,
+  .pl-registration .pl-registration-8 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 14px 20px;
+  }
+
+  .pl-registration .pl-registration-9 {
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 32px;
+    padding-top: 20px;
+    line-height: 1.5;
+  }
+
+  .pl-registration .pl-registration-10 {
+    display: none;
+  }
 }
 {% endstylesheet %}
 
@@ -113,6 +274,12 @@
       "id": "text_8",
       "label": "Custom and institutional orders quoted sep…",
       "default": "Custom and institutional orders quoted separately"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
     },
     {
       "type": "font_picker",
