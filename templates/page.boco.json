@@ -13,17 +13,23 @@
       "type": "pl-header",
       "name": "PL Wholesale header",
       "settings": {
-        "link_1": "#collection",
-        "link_2": "#how",
-        "link_3": "https://mybocohome.com/pages/ws-account-login",
-        "link_4": "#register",
+        "logo_width": 150,
+        "logo_width_mobile": 110,
         "text_1": "Postcard Lanterns",
         "text_2": "Wholesale",
+        "menu": "",
         "text_3": "Collection",
+        "link_1": "#collection",
         "text_4": "How it works",
+        "link_2": "#how",
         "text_5": "Log in",
+        "link_3": "https://mybocohome.com/pages/ws-account-login",
         "text_6": "Apply for wholesale",
-        "font": "assistant_n4"
+        "link_4": "#register",
+        "color_scheme": "scheme-1",
+        "font": "assistant_n4",
+        "menu_label": "Open navigation menu",
+        "close_label": "Close menu"
       }
     },
     "pl_hero_BtjHcX": {
