@@ -46,6 +46,7 @@
         "text_5": "Register for pricing",
         "text_6": "Browse the collection",
         "text_7": "Trade pricing and ordering unlock once your account is approved.",
+        "color_scheme": "",
         "font": "assistant_n4"
       }
     },
@@ -105,6 +106,7 @@
       "settings": {
         "text_1": "About us",
         "text_2": "Bo•Co Home makes decorative lanterns in Colorado, printing scenic photography onto four-panel LED lanterns that light a room the way a postcard lights a memory.",
+        "color_scheme": "scheme-2",
         "font": "assistant_n4"
       }
     },
