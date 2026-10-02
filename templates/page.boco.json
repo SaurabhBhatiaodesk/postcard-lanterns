@@ -106,6 +106,8 @@
       "settings": {
         "text_1": "About us",
         "text_2": "Westward Glow is a Colorado-based mother-daughter team creating illuminated art inspired by the landscapes we call home. Combining original local photography with thoughtful design, our scenic postcard lanterns offer a warm, artistic way to bring a little piece of Colorado home.",
+        "image": "shopify://shop_images/aaa4a010-51b8-4ac4-83af-6f32a8650e0e_medium_ee90819d-3180-4499-a274-6a552af823d1.png",
+        "image_alt": "",
         "color_scheme": "scheme-1",
         "font": "assistant_n4"
       }
