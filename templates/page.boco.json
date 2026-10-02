@@ -42,7 +42,7 @@
         "text_1": "Scenic Colorado Collection",
         "text_2": "Colorado postcards,",
         "text_3": "lit from within.",
-        "text_4": "A wholesale line of decorative LED lanterns printed with Colorado scenes, made for souvenir counters, park gift shops, hotels and independent retailers.",
+        "text_4": "Westward Glow’s Scenic Postcard Lanterns transform original Colorado photography into illuminated art. Featuring three backlit scenic images captured by a local photographer, each lantern offers a distinctive, elevated take on the Colorado souvenir.",
         "text_5": "Register for pricing",
         "text_6": "Browse the collection",
         "text_7": "Trade pricing and ordering unlock once your account is approved.",
@@ -159,6 +159,7 @@
         "link_1": "https://mybocohome.com/pages/ws-account-login",
         "text_1": "Already approved? Sign in to see your pricing.",
         "text_2": "Log in",
+        "color_scheme": "scheme-3",
         "font": "assistant_n4"
       }
     },
@@ -176,6 +177,7 @@
         "text_6": "Minimums and case quantities shown after approval",
         "text_7": "·",
         "text_8": "Custom and institutional orders quoted separately",
+        "color_scheme": "",
         "font": "assistant_n4"
       }
     }
